@@ -21,5 +21,5 @@ RUN echo "export JAVA_HOME=$JDK_HOME" >> /etc/profile && \
 ARG JAR_FILE
 ADD ${JAR_FILE} /app/app.jar
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "app.jar"]
-CMD ["--spring.datasource.url=jdbc:mysql://mysql:3306/oomall_demo?serverTimezone=Asia/Shanghai","--spring.datasource.username=demouser", "--spring.datasource.password=123456"]
+#ENTRYPOINT ["java", "-jar", "app.jar"]
+#CMD ["--spring.datasource.url=jdbc:mysql://mysql:3306/oomall_demo?serverTimezone=Asia/Shanghai","--spring.datasource.username=demouser", "--spring.datasource.password=123456"]
