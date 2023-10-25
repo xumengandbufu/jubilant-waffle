@@ -1,0 +1,76 @@
+2023-10-12 06:26:41.273 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - Starting AdminProductControllerTest using Java 17.0.8 with PID 12192 (started by mingQ in C:\Users\mingQ\IdeaProjects\JavaEEPlatform\4.SpringMVC\RestFulDemo)
+2023-10-12 06:26:41.274 [main] DEBUG c.e.x.j.restfuldemo.AdminProductControllerTest - Running with Spring Boot v3.1.4, Spring v6.0.12
+2023-10-12 06:26:41.274 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - No active profile set, falling back to 1 default profile: "default"
+2023-10-12 06:26:44.117 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - Started AdminProductControllerTest in 3.502 seconds (process running for 5.802)
+2023-10-12 06:27:42.112 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - Starting AdminProductControllerTest using Java 17.0.8 with PID 11956 (started by mingQ in C:\Users\mingQ\IdeaProjects\JavaEEPlatform\4.SpringMVC\RestFulDemo)
+2023-10-12 06:27:42.113 [main] DEBUG c.e.x.j.restfuldemo.AdminProductControllerTest - Running with Spring Boot v3.1.4, Spring v6.0.12
+2023-10-12 06:27:42.113 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - No active profile set, falling back to 1 default profile: "default"
+2023-10-12 06:27:43.699 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - Started AdminProductControllerTest in 1.824 seconds (process running for 2.768)
+2023-10-12 06:28:21.300 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - Starting AdminProductControllerTest using Java 17.0.8 with PID 8708 (started by mingQ in C:\Users\mingQ\IdeaProjects\JavaEEPlatform\4.SpringMVC\RestFulDemo)
+2023-10-12 06:28:21.301 [main] DEBUG c.e.x.j.restfuldemo.AdminProductControllerTest - Running with Spring Boot v3.1.4, Spring v6.0.12
+2023-10-12 06:28:21.302 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - No active profile set, falling back to 1 default profile: "default"
+2023-10-12 06:28:22.843 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - Started AdminProductControllerTest in 1.793 seconds (process running for 2.643)
+2023-10-12 06:28:23.909 [main] DEBUG c.e.x.j.r.controller.AdminProductController - createDraft: vo = ProductDraftVo(name=好好学习, originalPrice=2000, categoryId=null, unit=10, originPlace=1000)
+2023-10-12 06:31:46.568 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - Starting AdminProductControllerTest using Java 17.0.8 with PID 11676 (started by mingQ in C:\Users\mingQ\IdeaProjects\JavaEEPlatform\4.SpringMVC\RestFulDemo)
+2023-10-12 06:31:46.569 [main] DEBUG c.e.x.j.restfuldemo.AdminProductControllerTest - Running with Spring Boot v3.1.4, Spring v6.0.12
+2023-10-12 06:31:46.570 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - No active profile set, falling back to 1 default profile: "default"
+2023-10-12 06:31:48.239 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - Started AdminProductControllerTest in 1.964 seconds (process running for 2.974)
+2023-10-12 06:31:49.213 [main] DEBUG c.e.x.j.r.controller.AdminProductController - createDraft: vo = ProductDraftVo(name=好好学习, originalPrice=2000, categoryId=null, unit=10, originPlace=厦门)
+2023-10-12 06:32:13.533 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - Starting AdminProductControllerTest using Java 17.0.8 with PID 11800 (started by mingQ in C:\Users\mingQ\IdeaProjects\JavaEEPlatform\4.SpringMVC\RestFulDemo)
+2023-10-12 06:32:13.534 [main] DEBUG c.e.x.j.restfuldemo.AdminProductControllerTest - Running with Spring Boot v3.1.4, Spring v6.0.12
+2023-10-12 06:32:13.535 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - No active profile set, falling back to 1 default profile: "default"
+2023-10-12 06:32:15.016 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - Started AdminProductControllerTest in 1.781 seconds (process running for 2.781)
+2023-10-12 06:32:16.010 [main] DEBUG c.e.x.j.r.controller.AdminProductController - createDraft: vo = ProductDraftVo(name=好好学习, originalPrice=2000, categoryId=null, unit=10, originPlace=厦门)
+2023-10-12 06:34:16.485 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - Starting AdminProductControllerTest using Java 17.0.8 with PID 4876 (started by mingQ in C:\Users\mingQ\IdeaProjects\JavaEEPlatform\4.SpringMVC\RestFulDemo)
+2023-10-12 06:34:16.486 [main] DEBUG c.e.x.j.restfuldemo.AdminProductControllerTest - Running with Spring Boot v3.1.4, Spring v6.0.12
+2023-10-12 06:34:16.487 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - No active profile set, falling back to 1 default profile: "default"
+2023-10-12 06:34:18.006 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - Started AdminProductControllerTest in 1.771 seconds (process running for 2.773)
+2023-10-12 06:34:19.042 [main] DEBUG c.e.x.j.r.controller.AdminProductController - createDraft: vo = ProductDraftVo(name=好好学习, originalPrice=2000, categoryId=null, unit=10, originPlace=厦门)
+2023-10-12 06:35:37.254 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - Starting AdminProductControllerTest using Java 17.0.8 with PID 10984 (started by mingQ in C:\Users\mingQ\IdeaProjects\JavaEEPlatform\4.SpringMVC\RestFulDemo)
+2023-10-12 06:35:37.255 [main] DEBUG c.e.x.j.restfuldemo.AdminProductControllerTest - Running with Spring Boot v3.1.4, Spring v6.0.12
+2023-10-12 06:35:37.255 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - No active profile set, falling back to 1 default profile: "default"
+2023-10-12 06:35:38.844 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - Started AdminProductControllerTest in 1.897 seconds (process running for 3.0)
+2023-10-12 06:35:39.886 [main] DEBUG c.e.x.j.r.controller.AdminProductController - createDraft: vo = ProductDraftVo(name=好好学习, originalPrice=2000, categoryId=null, unit=10, originPlace=厦门)
+2023-10-12 06:37:53.490 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - Starting AdminProductControllerTest using Java 17.0.8 with PID 4732 (started by mingQ in C:\Users\mingQ\IdeaProjects\JavaEEPlatform\4.SpringMVC\RestFulDemo)
+2023-10-12 06:37:53.491 [main] DEBUG c.e.x.j.restfuldemo.AdminProductControllerTest - Running with Spring Boot v3.1.4, Spring v6.0.12
+2023-10-12 06:37:53.492 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - No active profile set, falling back to 1 default profile: "default"
+2023-10-12 06:37:55.081 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - Started AdminProductControllerTest in 1.906 seconds (process running for 2.923)
+2023-10-12 06:37:56.237 [main] DEBUG c.e.x.j.r.controller.AdminProductController - createDraft: vo = ProductDraftVo(name=好好学习, originalPrice=2000, categoryId=null, unit=10, originPlace=厦门)
+2023-10-12 06:39:09.990 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - Starting AdminProductControllerTest using Java 17.0.8 with PID 2192 (started by mingQ in C:\Users\mingQ\IdeaProjects\JavaEEPlatform\4.SpringMVC\RestFulDemo)
+2023-10-12 06:39:09.991 [main] DEBUG c.e.x.j.restfuldemo.AdminProductControllerTest - Running with Spring Boot v3.1.4, Spring v6.0.12
+2023-10-12 06:39:09.992 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - No active profile set, falling back to 1 default profile: "default"
+2023-10-12 06:39:11.619 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - Started AdminProductControllerTest in 1.876 seconds (process running for 2.831)
+2023-10-12 06:39:12.753 [main] DEBUG c.e.x.j.r.controller.AdminProductController - createDraft: vo = ProductDraftVo(name=好好学习, originalPrice=2000, categoryId=null, unit=10, originPlace=厦门)
+2023-10-12 06:39:48.639 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - Starting AdminProductControllerTest using Java 17.0.8 with PID 9380 (started by mingQ in C:\Users\mingQ\IdeaProjects\JavaEEPlatform\4.SpringMVC\RestFulDemo)
+2023-10-12 06:39:48.640 [main] DEBUG c.e.x.j.restfuldemo.AdminProductControllerTest - Running with Spring Boot v3.1.4, Spring v6.0.12
+2023-10-12 06:39:48.640 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - No active profile set, falling back to 1 default profile: "default"
+2023-10-12 06:39:50.189 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - Started AdminProductControllerTest in 1.835 seconds (process running for 2.84)
+2023-10-12 06:39:51.278 [main] DEBUG c.e.x.j.r.controller.AdminProductController - createDraft: vo = ProductDraftVo(name=好好学习, originalPrice=2000, categoryId=null, unit=10, originPlace=厦门)
+2023-10-12 06:40:13.287 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - Starting AdminProductControllerTest using Java 17.0.8 with PID 9036 (started by mingQ in C:\Users\mingQ\IdeaProjects\JavaEEPlatform\4.SpringMVC\RestFulDemo)
+2023-10-12 06:40:13.288 [main] DEBUG c.e.x.j.restfuldemo.AdminProductControllerTest - Running with Spring Boot v3.1.4, Spring v6.0.12
+2023-10-12 06:40:13.289 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - No active profile set, falling back to 1 default profile: "default"
+2023-10-12 06:40:14.925 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - Started AdminProductControllerTest in 1.956 seconds (process running for 2.883)
+2023-10-12 06:40:15.975 [main] DEBUG c.e.x.j.r.controller.AdminProductController - createDraft: vo = ProductDraftVo(name=好好学习, originalPrice=2000, categoryId=null, unit=10, originPlace=厦门)
+2023-10-12 06:41:10.369 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - Starting AdminProductControllerTest using Java 17.0.8 with PID 9636 (started by mingQ in C:\Users\mingQ\IdeaProjects\JavaEEPlatform\4.SpringMVC\RestFulDemo)
+2023-10-12 06:41:10.370 [main] DEBUG c.e.x.j.restfuldemo.AdminProductControllerTest - Running with Spring Boot v3.1.4, Spring v6.0.12
+2023-10-12 06:41:10.371 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - No active profile set, falling back to 1 default profile: "default"
+2023-10-12 06:41:12.369 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - Started AdminProductControllerTest in 2.318 seconds (process running for 3.366)
+2023-10-12 06:41:13.529 [main] DEBUG c.e.x.j.r.controller.AdminProductController - createDraft: vo = ProductDraftVo(name=好好学习, originalPrice=2000, categoryId=null, unit=10, originPlace=厦门)
+2023-10-12 06:41:13.555 [main] DEBUG c.e.x.j.r.controller.AdminProductController - getProducts: shopId = 2, id = 1
+2023-10-12 06:41:13.555 [main] DEBUG c.e.xmu.javaee.restfuldemo.service.ProductService - getDraft: draft = ProductDraft(super=cn.edu.xmu.javaee.restfuldemo.dao.bo.ProductDraft@4bcb29c7, id=1, name=测试1, originalPrice=100, originPlace=厦门, categoryId=2, productId=100, shopId=2)
+2023-10-12 06:41:40.417 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - Starting AdminProductControllerTest using Java 17.0.8 with PID 11832 (started by mingQ in C:\Users\mingQ\IdeaProjects\JavaEEPlatform\4.SpringMVC\RestFulDemo)
+2023-10-12 06:41:40.418 [main] DEBUG c.e.x.j.restfuldemo.AdminProductControllerTest - Running with Spring Boot v3.1.4, Spring v6.0.12
+2023-10-12 06:41:40.419 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - No active profile set, falling back to 1 default profile: "default"
+2023-10-12 06:41:42.096 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - Started AdminProductControllerTest in 1.995 seconds (process running for 2.97)
+2023-10-12 06:41:43.545 [main] DEBUG c.e.x.j.r.controller.AdminProductController - createDraft: vo = ProductDraftVo(name=好好学习, originalPrice=2000, categoryId=null, unit=10, originPlace=厦门)
+2023-10-12 06:41:43.568 [main] DEBUG c.e.x.j.r.controller.AdminProductController - getProducts: shopId = 2, id = 1
+2023-10-12 06:41:43.568 [main] DEBUG c.e.xmu.javaee.restfuldemo.service.ProductService - getDraft: draft = ProductDraft(super=cn.edu.xmu.javaee.restfuldemo.dao.bo.ProductDraft@4bcb29c7, id=1, name=测试1, originalPrice=100, originPlace=厦门, categoryId=2, productId=100, shopId=2)
+2023-10-12 06:42:52.325 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - Starting AdminProductControllerTest using Java 17.0.8 with PID 12100 (started by mingQ in C:\Users\mingQ\IdeaProjects\JavaEEPlatform\4.SpringMVC\RestFulDemo)
+2023-10-12 06:42:52.326 [main] DEBUG c.e.x.j.restfuldemo.AdminProductControllerTest - Running with Spring Boot v3.1.4, Spring v6.0.12
+2023-10-12 06:42:52.326 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - No active profile set, falling back to 1 default profile: "default"
+2023-10-12 06:42:53.834 [main] INFO  c.e.x.j.restfuldemo.AdminProductControllerTest - Started AdminProductControllerTest in 1.763 seconds (process running for 2.636)
+2023-10-12 06:42:54.867 [main] DEBUG c.e.x.j.r.controller.AdminProductController - createDraft: vo = ProductDraftVo(name=好好学习, originalPrice=2000, categoryId=null, unit=10, originPlace=厦门)
+2023-10-12 06:42:54.882 [main] DEBUG c.e.x.j.r.controller.AdminProductController - getProducts: shopId = 2, id = 11
+2023-10-12 06:42:54.892 [main] DEBUG c.e.x.j.r.controller.AdminProductController - getProducts: shopId = 2, id = 1
+2023-10-12 06:42:54.892 [main] DEBUG c.e.xmu.javaee.restfuldemo.service.ProductService - getDraft: draft = ProductDraft(super=cn.edu.xmu.javaee.restfuldemo.dao.bo.ProductDraft@4bcb29c7, id=1, name=测试1, originalPrice=100, originPlace=厦门, categoryId=2, productId=100, shopId=2)
+2023-10-12 06:42:54.903 [main] DEBUG c.e.x.j.r.controller.AdminProductController - getProducts: shopId = 4, id = 1

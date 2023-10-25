@@ -1,0 +1,22 @@
+2023-10-19 00:12:59.418 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2023-10-19 00:12:59.461 [main] INFO  c.e.x.j.g.controller.AdminProductControllerTest - Starting AdminProductControllerTest using Java 17.0.8 with PID 2096 (started by mingQ in C:\Users\mingQ\IdeaProjects\JavaEEPlatform\5.MyBatis\productdemo)
+2023-10-19 00:12:59.462 [main] INFO  c.e.x.j.g.controller.AdminProductControllerTest - No active profile set, falling back to 1 default profile: "default"
+2023-10-19 00:13:02.171 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-10-19 00:13:02.171 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-10-19 00:13:02.177 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+2023-10-19 00:13:02.190 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 18 ms
+2023-10-19 00:13:02.253 [main] INFO  c.e.x.j.g.controller.AdminProductControllerTest - Started AdminProductControllerTest in 3.136 seconds (process running for 4.299)
+2023-10-19 00:13:02.412 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2023-10-19 00:13:04.835 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2023-10-19 00:13:04.840 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2023-10-19 00:15:34.032 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2023-10-19 00:15:34.077 [main] INFO  c.e.x.j.g.controller.AdminProductControllerTest - Starting AdminProductControllerTest using Java 17.0.8 with PID 9936 (started by mingQ in C:\Users\mingQ\IdeaProjects\JavaEEPlatform\5.MyBatis\productdemo)
+2023-10-19 00:15:34.078 [main] INFO  c.e.x.j.g.controller.AdminProductControllerTest - No active profile set, falling back to 1 default profile: "default"
+2023-10-19 00:15:36.194 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2023-10-19 00:15:36.195 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2023-10-19 00:15:36.203 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 13 endpoint(s) beneath base path '/actuator'
+2023-10-19 00:15:36.217 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 21 ms
+2023-10-19 00:15:36.275 [main] INFO  c.e.x.j.g.controller.AdminProductControllerTest - Started AdminProductControllerTest in 2.476 seconds (process running for 3.499)
+2023-10-19 00:15:36.391 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2023-10-19 00:15:38.688 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2023-10-19 00:15:38.693 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed

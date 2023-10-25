@@ -1,0 +1,35 @@
+2023-10-11 22:24:06.290 [main] INFO  cn.edu.xmu.javaee.restfuldemo.DemoApplication - Starting DemoApplication using Java 17.0.8 with PID 7824 (C:\Users\mingQ\IdeaProjects\JavaEEPlatform\4.SpringMVC\RestFulDemo\target\classes started by mingQ in C:\Users\mingQ\IdeaProjects\JavaEEPlatform)
+2023-10-11 22:24:06.291 [main] DEBUG cn.edu.xmu.javaee.restfuldemo.DemoApplication - Running with Spring Boot v3.1.4, Spring v6.0.12
+2023-10-11 22:24:06.292 [main] INFO  cn.edu.xmu.javaee.restfuldemo.DemoApplication - No active profile set, falling back to 1 default profile: "default"
+2023-10-11 22:24:07.532 [main] INFO  cn.edu.xmu.javaee.restfuldemo.DemoApplication - Started DemoApplication in 1.52 seconds (process running for 2.324)
+2023-10-11 22:24:30.440 [http-nio-8080-exec-1] DEBUG c.e.x.j.r.controller.AdminProductController - getProducts: shopId = 2, id = 1
+2023-10-11 22:24:42.637 [http-nio-8080-exec-2] DEBUG c.e.x.j.r.controller.AdminProductController - getProducts: shopId = 1, id = 1
+2023-10-11 22:25:20.991 [http-nio-8080-exec-3] DEBUG c.e.x.j.r.controller.AdminProductController - getProducts: shopId = 2, id = 1
+2023-10-11 22:30:29.943 [main] INFO  cn.edu.xmu.javaee.restfuldemo.DemoApplication - Starting DemoApplication using Java 17.0.8 with PID 4916 (C:\Users\mingQ\IdeaProjects\JavaEEPlatform\4.SpringMVC\RestFulDemo\target\classes started by mingQ in C:\Users\mingQ\IdeaProjects\JavaEEPlatform)
+2023-10-11 22:30:29.944 [main] DEBUG cn.edu.xmu.javaee.restfuldemo.DemoApplication - Running with Spring Boot v3.1.4, Spring v6.0.12
+2023-10-11 22:30:29.945 [main] INFO  cn.edu.xmu.javaee.restfuldemo.DemoApplication - No active profile set, falling back to 1 default profile: "default"
+2023-10-11 22:30:31.125 [main] INFO  cn.edu.xmu.javaee.restfuldemo.DemoApplication - Started DemoApplication in 1.491 seconds (process running for 2.026)
+2023-10-11 22:30:45.955 [http-nio-8080-exec-1] DEBUG c.e.x.j.r.controller.AdminProductController - getProducts: shopId = 2, id = 1
+2023-10-11 22:30:45.956 [http-nio-8080-exec-1] DEBUG c.e.xmu.javaee.restfuldemo.service.ProductService - getDraft: draft = ProductDraft(super=cn.edu.xmu.javaee.restfuldemo.dao.bo.ProductDraft@4bcb29c7, id=1, name=测试1, originalPrice=100, originPlace=厦门, categoryId=2, productId=100, shopId=2)
+2023-10-11 22:33:11.457 [main] INFO  cn.edu.xmu.javaee.restfuldemo.DemoApplication - Starting DemoApplication using Java 17.0.8 with PID 14328 (C:\Users\mingQ\IdeaProjects\JavaEEPlatform\4.SpringMVC\RestFulDemo\target\classes started by mingQ in C:\Users\mingQ\IdeaProjects\JavaEEPlatform)
+2023-10-11 22:33:11.458 [main] DEBUG cn.edu.xmu.javaee.restfuldemo.DemoApplication - Running with Spring Boot v3.1.4, Spring v6.0.12
+2023-10-11 22:33:11.458 [main] INFO  cn.edu.xmu.javaee.restfuldemo.DemoApplication - No active profile set, falling back to 1 default profile: "default"
+2023-10-11 22:33:12.648 [main] INFO  cn.edu.xmu.javaee.restfuldemo.DemoApplication - Started DemoApplication in 1.496 seconds (process running for 2.112)
+2023-10-11 22:33:31.020 [main] INFO  cn.edu.xmu.javaee.restfuldemo.DemoApplication - Starting DemoApplication using Java 17.0.8 with PID 9440 (C:\Users\mingQ\IdeaProjects\JavaEEPlatform\4.SpringMVC\RestFulDemo\target\classes started by mingQ in C:\Users\mingQ\IdeaProjects\JavaEEPlatform)
+2023-10-11 22:33:31.021 [main] DEBUG cn.edu.xmu.javaee.restfuldemo.DemoApplication - Running with Spring Boot v3.1.4, Spring v6.0.12
+2023-10-11 22:33:31.022 [main] INFO  cn.edu.xmu.javaee.restfuldemo.DemoApplication - No active profile set, falling back to 1 default profile: "default"
+2023-10-11 22:33:32.209 [main] INFO  cn.edu.xmu.javaee.restfuldemo.DemoApplication - Started DemoApplication in 1.488 seconds (process running for 2.036)
+2023-10-11 22:33:44.399 [http-nio-8080-exec-1] DEBUG c.e.x.j.r.controller.AdminProductController - getProducts: shopId = 2, id = 1
+2023-10-11 22:33:44.401 [http-nio-8080-exec-1] DEBUG c.e.xmu.javaee.restfuldemo.service.ProductService - getDraft: draft = ProductDraft(super=cn.edu.xmu.javaee.restfuldemo.dao.bo.ProductDraft@4bcb29c7, id=1, name=测试1, originalPrice=100, originPlace=厦门, categoryId=2, productId=100, shopId=2)
+2023-10-11 22:33:58.213 [main] INFO  cn.edu.xmu.javaee.restfuldemo.DemoApplication - Starting DemoApplication using Java 17.0.8 with PID 9096 (C:\Users\mingQ\IdeaProjects\JavaEEPlatform\4.SpringMVC\RestFulDemo\target\classes started by mingQ in C:\Users\mingQ\IdeaProjects\JavaEEPlatform)
+2023-10-11 22:33:58.214 [main] DEBUG cn.edu.xmu.javaee.restfuldemo.DemoApplication - Running with Spring Boot v3.1.4, Spring v6.0.12
+2023-10-11 22:33:58.215 [main] INFO  cn.edu.xmu.javaee.restfuldemo.DemoApplication - No active profile set, falling back to 1 default profile: "default"
+2023-10-11 22:33:59.436 [main] INFO  cn.edu.xmu.javaee.restfuldemo.DemoApplication - Started DemoApplication in 1.529 seconds (process running for 2.067)
+2023-10-11 22:34:02.946 [http-nio-8080-exec-1] DEBUG c.e.x.j.r.controller.AdminProductController - getProducts: shopId = 2, id = 1
+2023-10-11 22:34:02.948 [http-nio-8080-exec-1] DEBUG c.e.xmu.javaee.restfuldemo.service.ProductService - getDraft: draft = ProductDraft(super=cn.edu.xmu.javaee.restfuldemo.dao.bo.ProductDraft@4bcb29c7, id=1, name=测试1, originalPrice=100, originPlace=厦门, categoryId=2, productId=100, shopId=2)
+2023-10-11 22:34:21.246 [main] INFO  cn.edu.xmu.javaee.restfuldemo.DemoApplication - Starting DemoApplication using Java 17.0.8 with PID 8940 (C:\Users\mingQ\IdeaProjects\JavaEEPlatform\4.SpringMVC\RestFulDemo\target\classes started by mingQ in C:\Users\mingQ\IdeaProjects\JavaEEPlatform)
+2023-10-11 22:34:21.247 [main] DEBUG cn.edu.xmu.javaee.restfuldemo.DemoApplication - Running with Spring Boot v3.1.4, Spring v6.0.12
+2023-10-11 22:34:21.247 [main] INFO  cn.edu.xmu.javaee.restfuldemo.DemoApplication - No active profile set, falling back to 1 default profile: "default"
+2023-10-11 22:34:22.420 [main] INFO  cn.edu.xmu.javaee.restfuldemo.DemoApplication - Started DemoApplication in 1.466 seconds (process running for 2.003)
+2023-10-11 22:34:30.513 [http-nio-8080-exec-1] DEBUG c.e.x.j.r.controller.AdminProductController - getProducts: shopId = 2, id = 1
+2023-10-11 22:34:30.515 [http-nio-8080-exec-1] DEBUG c.e.xmu.javaee.restfuldemo.service.ProductService - getDraft: draft = ProductDraft(super=cn.edu.xmu.javaee.restfuldemo.dao.bo.ProductDraft@4bcb29c7, id=1, name=测试1, originalPrice=100, originPlace=厦门, categoryId=2, productId=100, shopId=2)
