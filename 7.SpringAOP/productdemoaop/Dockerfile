@@ -11,7 +11,7 @@ RUN apt-get update
 RUN apt-get install -y wget
 RUN wget https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.tar.gz
 RUN tar -xzf jdk-17_linux-x64_bin.tar.gz -C /opt
-RUN rm -f jdk-17_linux-x64_bin.tar.gz && \
+RUN rm -f jdk-17_linux-x64_bin.tar.gz
 RUN mv /opt/jdk-17 /opt/jdk
 
 # 配置Java环境变量
