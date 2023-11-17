@@ -11,7 +11,7 @@ server:
 spring:
   #MongoDB configuration
   mongodb:
-    host: mongo
+    host: mongo1
     port: 27017
     database: oomall_demo
   jackson:
