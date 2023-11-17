@@ -17,4 +17,8 @@ spring:
     #JSON的时间数据的时区
     time-zone: GMT+8
 
+logging:
+  level:
+    org.mongodb.driver.protocol.command: DEBUG
+
 
