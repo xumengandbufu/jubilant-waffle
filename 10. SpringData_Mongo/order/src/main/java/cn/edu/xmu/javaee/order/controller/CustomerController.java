@@ -1,21 +1,20 @@
 //School of Informatics Xiamen University, GPL-3.0 license
 
-package cn.edu.xmu.oomall.order.controller;
+package cn.edu.xmu.javaee.order.controller;
 
 import cn.edu.xmu.javaee.core.model.ReturnNo;
 import cn.edu.xmu.javaee.core.model.ReturnObject;
 import cn.edu.xmu.javaee.core.model.dto.UserDto;
-import cn.edu.xmu.oomall.order.controller.vo.OrderVo;
-import cn.edu.xmu.oomall.order.dao.bo.Order;
-import cn.edu.xmu.oomall.order.dao.bo.OrderItem;
-import cn.edu.xmu.oomall.order.service.OrderService;
 import cn.edu.xmu.javaee.core.util.CloneFactory;
+import cn.edu.xmu.javaee.order.controller.dto.OrderDto;
+import cn.edu.xmu.javaee.order.controller.dto.OrderItemDto;
+import cn.edu.xmu.javaee.order.controller.vo.OrderVo;
+import cn.edu.xmu.javaee.order.dao.bo.Order;
+import cn.edu.xmu.javaee.order.dao.bo.OrderItem;
+import cn.edu.xmu.javaee.order.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -32,12 +31,22 @@ public class CustomerController {
     }
 
     @PostMapping("/orders")
-    public ReturnObject createOrder(@RequestBody @Validated OrderVo orderVo, UserDto user) {
+    public ReturnObject createOrder(@RequestBody @Validated OrderVo orderVo) {
         Order order = CloneFactory.copy(new Order(), orderVo);
+        UserDto user = UserDto.builder().id(1L).name("test").build();
         List<OrderItem> items = orderVo.getItems().stream().map(item -> CloneFactory.copy(new OrderItem(), item)).collect(Collectors.toList());
         order.setOrderItems(items);
         Order newOrder = this.orderService.createOrder(order, user);
         return new ReturnObject(ReturnNo.CREATED);
+    }
+
+    @GetMapping("/orders/{id}")
+    public ReturnObject getOrders(@PathVariable String id){
+        Order order = this.orderService.findOrder(id);
+        List<OrderItemDto> items  = order.getOrderItems().stream().map(o -> CloneFactory.copy(new OrderItemDto(), o)).collect(Collectors.toList());
+        OrderDto dto = CloneFactory.copy(new OrderDto(), order);
+        dto.setOrderItems(items);
+        return new ReturnObject(dto);
     }
 
 }

@@ -1,6 +1,6 @@
-package cn.edu.xmu.oomall.order.mapper;
+package cn.edu.xmu.javaee.order.mapper;
 
-import cn.edu.xmu.oomall.order.dao.bo.Order;
+import cn.edu.xmu.javaee.order.dao.bo.Order;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;

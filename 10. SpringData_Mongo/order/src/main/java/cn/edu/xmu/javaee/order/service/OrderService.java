@@ -1,12 +1,12 @@
 //School of Informatics Xiamen University, GPL-3.0 license
 
-package cn.edu.xmu.oomall.order.service;
+package cn.edu.xmu.javaee.order.service;
 
 import cn.edu.xmu.javaee.core.model.dto.UserDto;
 import cn.edu.xmu.javaee.core.util.SnowFlakeIdWorker;
-import cn.edu.xmu.oomall.order.dao.OrderDao;
-import cn.edu.xmu.oomall.order.dao.bo.Order;
-import cn.edu.xmu.oomall.order.dao.bo.OrderItem;
+import cn.edu.xmu.javaee.order.dao.OrderDao;
+import cn.edu.xmu.javaee.order.dao.bo.Order;
+import cn.edu.xmu.javaee.order.dao.bo.OrderItem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -32,4 +32,7 @@ public class OrderService {
         return this.orderDao.insert(order);
     }
 
+    public Order findOrder(String id){
+        return this.orderDao.findById(id);
+    }
 }

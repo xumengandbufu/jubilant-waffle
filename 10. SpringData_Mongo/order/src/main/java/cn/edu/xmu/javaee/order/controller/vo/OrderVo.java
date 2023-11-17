@@ -1,6 +1,6 @@
 //School of Informatics Xiamen University, GPL-3.0 license
 
-package cn.edu.xmu.oomall.order.controller.vo;
+package cn.edu.xmu.javaee.order.controller.vo;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

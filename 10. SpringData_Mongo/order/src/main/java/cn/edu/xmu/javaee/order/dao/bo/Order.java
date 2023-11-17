@@ -1,9 +1,7 @@
 //School of Informatics Xiamen University, GPL-3.0 license
 
-package cn.edu.xmu.oomall.order.dao.bo;
+package cn.edu.xmu.javaee.order.dao.bo;
 
-import cn.edu.xmu.javaee.core.aop.CopyFrom;
-import cn.edu.xmu.oomall.order.controller.vo.OrderVo;
 import lombok.*;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.MongoId;
@@ -14,8 +12,8 @@ import java.util.List;
 @ToString(callSuper = true)
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @Document(collection = "order")
-@CopyFrom({OrderVo.class})
 public class Order {
 
     @MongoId

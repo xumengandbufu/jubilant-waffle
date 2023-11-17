@@ -1,17 +1,15 @@
 //School of Informatics Xiamen University, GPL-3.0 license
 
-package cn.edu.xmu.oomall.order.dao.bo;
+package cn.edu.xmu.javaee.order.dao.bo;
 
-import cn.edu.xmu.javaee.core.aop.CopyFrom;
-import cn.edu.xmu.oomall.order.controller.vo.OrderItemVo;
 import lombok.*;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 
 @ToString(callSuper = true)
 @NoArgsConstructor
-@CopyFrom({OrderItemVo.class})
+@AllArgsConstructor
+@Builder
 public class OrderItem implements Serializable {
 
     private Long id;
