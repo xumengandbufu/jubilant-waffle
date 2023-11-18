@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.mapping.MongoId;
 import java.time.LocalDateTime;
 import java.util.List;
 
-@ToString(callSuper = true)
+@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder

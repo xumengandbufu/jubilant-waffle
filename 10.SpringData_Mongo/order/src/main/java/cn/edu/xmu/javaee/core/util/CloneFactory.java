@@ -40,9 +40,10 @@ public class CloneFactory {
 
     public static OrderItemDto copy(OrderItemDto target, OrderItem source){
         return OrderItemDto.builder()
+                .id(source.getId())
+                .onsaleId(source.getOnsaleId())
                 .price(source.getPrice())
                 .quantity(source.getQuantity())
-                .id(source.getId())
                 .name(source.getName())
                 .point(source.getPoint())
                 .discountPrice(source.getDiscountPrice())

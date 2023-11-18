@@ -1,13 +1,17 @@
 package cn.edu.xmu.javaee.order.controller.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.*;
+
+import java.io.Serializable;
 
 @AllArgsConstructor
 @Builder
 @NoArgsConstructor
-public class OrderItemDto {
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@ToString
+@Data
+public class OrderItemDto{
 
     private Long id;
 

@@ -11,8 +11,5 @@ import java.util.List;
 @Repository
 public interface OrderMapper extends MongoRepository<Order, String>{
 
-    @Query(value = "{'orderItems': { $elemMatch: { 'name': ?0 }}}")
-    List<Order> findByOrderItemsName(String name, Pageable pageable);
-
     Order findFirstByOrderSn(String orderSn);
 }

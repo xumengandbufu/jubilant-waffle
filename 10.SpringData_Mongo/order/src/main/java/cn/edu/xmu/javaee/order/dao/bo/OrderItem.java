@@ -6,7 +6,7 @@ import lombok.*;
 
 import java.io.Serializable;
 
-@ToString(callSuper = true)
+@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
