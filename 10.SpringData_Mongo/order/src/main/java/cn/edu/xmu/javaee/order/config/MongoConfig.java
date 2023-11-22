@@ -27,11 +27,6 @@ public class MongoConfig extends AbstractMongoClientConfiguration {
     @Value("${spring.data.mongodb.port}")
     private Integer port;
 
-    @Value(value = "${spring.data.mongodb.username}")
-    private String username;
-
-    @Value(value = "${spring.data.mongodb.password}")
-    private String password;
     @Bean
     MongoTransactionManager transactionManager(MongoDatabaseFactory dbFactory) {
         return new MongoTransactionManager(dbFactory);
@@ -49,10 +44,6 @@ public class MongoConfig extends AbstractMongoClientConfiguration {
                         // 集群设置
                         .applyToClusterSettings(builder ->
                                 builder.hosts(Arrays.asList(new ServerAddress(host, port))))
-                        // 凭据
-                        .credential(
-                                MongoCredential
-                                        .createCredential(username, database, password.toCharArray()))
                         .build());
         return mongoClient;
     }
