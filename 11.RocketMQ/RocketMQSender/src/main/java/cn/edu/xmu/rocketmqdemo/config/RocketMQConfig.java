@@ -25,7 +25,7 @@ public class RocketMQConfig {
     @Value("${rocketmq.producer.group}")
     private String producerGroup;
 
-    @Bean
+/*    @Bean
     public RocketMQTemplate rocketMQTemplate(){
         DefaultMQProducer producer = new DefaultMQProducer();
         int random = new Random().nextInt(100);
@@ -35,6 +35,6 @@ public class RocketMQConfig {
         template.setProducer(producer);
         logger.info("rocketMQTemplate: producerGroup = {}",producer.getProducerGroup());
         return template;
-    }
+    }*/
 
 }
