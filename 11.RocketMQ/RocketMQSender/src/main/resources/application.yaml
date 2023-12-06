@@ -14,7 +14,7 @@ server:
 # 配置rocketmq
 rocketmq:
   # 指定namesrv地址
-  name-server: 192.168.31.241:9876
+  name-server: rocketmq-namesrv:9876
   producer:
     #生产者group名称
     group: producer_group

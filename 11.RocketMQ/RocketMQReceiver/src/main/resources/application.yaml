@@ -1,0 +1,21 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+server:
+  port: 8081
+  tomcat:
+    threads:
+      max: 1000
+
+
+# 配置rocketmq
+rocketmq:
+  # 指定namesrv地址
+  name-server: rocketmq-namesrv:9876
+  group: consumer_group
+  # 一次拉取消息最大值，注意是拉取消息的最大值而非消费最大值
+  pull-batch-size: 10
+

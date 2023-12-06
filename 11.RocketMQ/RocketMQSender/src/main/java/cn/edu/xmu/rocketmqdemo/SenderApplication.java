@@ -10,13 +10,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.time.LocalDateTime;
 
 @SpringBootApplication
-public class DemoApplication implements CommandLineRunner {
+public class SenderApplication implements CommandLineRunner {
 
 	@Autowired
 	private RocketMQService rocketMQService;
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(SenderApplication.class, args);
 	}
 
 	@Override

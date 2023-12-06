@@ -1,27 +1,21 @@
 package cn.edu.xmu.rocketmqdemo.service;
 
 import cn.edu.xmu.rocketmqdemo.model.Log;
-import cn.edu.xmu.rocketmqdemo.model.OrderStockEvent;
 import cn.edu.xmu.rocketmqdemo.util.JacksonUtil;
 import org.apache.rocketmq.client.producer.SendCallback;
 import org.apache.rocketmq.client.producer.SendResult;
 import org.apache.rocketmq.spring.core.RocketMQTemplate;
-import org.apache.rocketmq.spring.support.RocketMQHeaders;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.messaging.Message;
-import org.springframework.messaging.MessageHeaders;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Service;
-import org.springframework.util.MimeTypeUtils;
+
 
 import javax.annotation.Resource;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
 
 /**
  * @author Ming Qiu
@@ -32,8 +26,7 @@ public class RocketMQService {
 
     private static final Logger logger = LoggerFactory.getLogger(RocketMQService.class);
 
-    @Resource
-    private RocketMQTemplate rocketMQTemplate;
+        private RocketMQTemplate rocketMQTemplate;
 
 
     @Value("${rocketmqdemo.order-pay-topic.delay-level}")
@@ -41,6 +34,12 @@ public class RocketMQService {
 
     @Value("${rocketmqdemo.order-pay-topic.timeout}")
     private long timeout;
+
+
+    @Autowired
+    public RocketMQService(RocketMQTemplate rocketMQTemplate) {
+        this.rocketMQTemplate = rocketMQTemplate;
+    }
 
     public void sendLogMessage(Log log){
 

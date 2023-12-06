@@ -1,4 +1,4 @@
-package cn.edu.xmu.rocketmqdemo.service.mq;
+package cn.edu.xmu.rocketmqdemo.service;
 
 import cn.edu.xmu.rocketmqdemo.util.JacksonUtil;
 import org.apache.rocketmq.spring.annotation.ConsumeMode;
@@ -6,7 +6,6 @@ import org.apache.rocketmq.spring.annotation.RocketMQMessageListener;
 import org.apache.rocketmq.spring.core.RocketMQListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -17,7 +16,7 @@ import java.time.LocalDateTime;
  * @date Created in 2020/11/7 22:47
  **/
 @Service
-@RocketMQMessageListener(topic = "order-pay-topic", consumeMode = ConsumeMode.CONCURRENTLY, consumeThreadMax = 10, consumerGroup = "pay-group")
+@RocketMQMessageListener(topic = "order-pay-topic", consumeMode = ConsumeMode.CONCURRENTLY, consumeThreadMax = 1, consumerGroup = "consumer-group")
 public class PayConsumerListener implements RocketMQListener<String> {
     private static final Logger logger = LoggerFactory.getLogger(PayConsumerListener.class);
     @Override

@@ -1,9 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/7.SpringAOP/productdemoaop/pom.xml" />
+        <option value="$PROJECT_DIR$/10. SpringData_Mongo/order/pom.xml" />
+        <option value="$PROJECT_DIR$/10.SpringData_Mongo/order/pom.xml" />
+        <option value="$PROJECT_DIR$/11.RocketMQ/RocketMQDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/11.RocketMQ/RocketMQReceiver/pom.xml" />
+        <option value="$PROJECT_DIR$/11.RocketMQ/RocketMQSender/pom.xml" />
       </list>
     </option>
   </component>
