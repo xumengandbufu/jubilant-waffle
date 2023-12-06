@@ -2,6 +2,8 @@ package cn.edu.xmu.rocketmqdemo.config;
 
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
 import org.apache.rocketmq.spring.core.RocketMQTemplate;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,6 +16,8 @@ import java.util.Random;
  **/
 @Configuration
 public class RocketMQConfig {
+
+    Logger logger = LoggerFactory.getLogger(RocketMQConfig.class);
 
     @Value("${rocketmq.name-server}")
     private String namesrv;
@@ -29,6 +33,7 @@ public class RocketMQConfig {
         producer.setNamesrvAddr(this.namesrv);
         RocketMQTemplate template = new RocketMQTemplate();
         template.setProducer(producer);
+        logger.info("rocketMQTemplate: producerGroup = {}",producer.getProducerGroup());
         return template;
     }
 

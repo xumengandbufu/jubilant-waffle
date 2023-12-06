@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
  * @date Created in 2020/11/7 22:47
  **/
 @Service
-@RocketMQMessageListener(topic = "order-pay-topic", consumeMode = ConsumeMode.CONCURRENTLY, consumeThreadMax = 1, consumerGroup = "consumer-group")
+@RocketMQMessageListener(topic = "order-pay-topic", consumerGroup = "consumer-group")
 public class PayConsumerListener implements RocketMQListener<String> {
     private static final Logger logger = LoggerFactory.getLogger(PayConsumerListener.class);
     @Override
