@@ -15,7 +15,7 @@ import cn.edu.xmu.rocketmqdemo.util.JacksonUtil;
  * @date Created in 2020/11/7 22:47
  **/
 @Service
-@RocketMQMessageListener(topic = "log-topic", selectorExpression = "1", consumeMode = ConsumeMode.CONCURRENTLY, consumeThreadMax = 1, consumerGroup = "consumer-group")
+@RocketMQMessageListener(topic = "log-topic", selectorExpression = "1", consumeMode = ConsumeMode.CONCURRENTLY, consumeThreadMax = 1, consumerGroup = "log-consumer-group")
 public class LogConsumerListener implements RocketMQListener<String>{
     private static final Logger logger = LoggerFactory.getLogger(LogConsumerListener.class);
     @Override
