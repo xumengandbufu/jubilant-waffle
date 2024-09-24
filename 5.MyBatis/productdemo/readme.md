@@ -38,7 +38,7 @@
 
 ## 安装MySQL镜像和服务
 ### 在目标服务器上安装MySQL镜像
-`docker pull mysql`
+`docker pull swr.cn-north-4.myhuaweicloud.com/oomall-javaee/mysql:latest`
 
 ### 更新目标服务器的label
 为目标服务器定义label，方便docker swarm在创建Service时，将Service部署在目标服务器上，以下我们在node1上定义了一个label `server=mysql`<br>
