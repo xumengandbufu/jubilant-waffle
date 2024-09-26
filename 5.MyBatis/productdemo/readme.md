@@ -54,7 +54,7 @@
 <br>`--mount type=bind,src=/root/mysql/data,dst=/var/lib/mysql`是将操作系统的`/root/mysql/data`mount到容器中的MySQL数据目录，这样将数据库数据存储在操作系统的目录下
 <br>`-e MYSQL_ROOT_PASSWORD=123456`是设定数据库root账户密码<br>
 <br>如果需要将mysql的端口暴露出来 加上--publish published=3306,target=3306
-<br>swr.cn-north-4.myhuaweicloud.com/oomall-javaee/mysql:latest 是mysql在华为云上的私有镜像，如果访问官网镜像请用mysql:latest
+<br>swr.cn-north-4.myhuaweicloud.com/oomall-javaee/mysql:latest 是mysql在华为云上的私有镜像，如果访问官网镜像请改成mysql:latest
 
 
 ### 在运行mysql服务的节点上运行sql脚本
