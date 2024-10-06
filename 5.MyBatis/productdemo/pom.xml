@@ -17,7 +17,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <fasterxml.version>2.15.2</fasterxml.version>
+        <fasterxml.version>2.18.0</fasterxml.version>
         <mybatis.version>3.0.2</mybatis.version>
         <generator.version>1.4.2</generator.version>
         <java.version>17</java.version>
@@ -35,9 +35,9 @@
         </dependency>
 
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.33</version>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>9.0.0</version>
         </dependency>
 
         <dependency>
@@ -181,6 +181,12 @@
 
     <!--    maven的仓库-->
     <repositories>
+        <repository>
+            <id>huaweicloud</id>
+            <name>huawei maven mirror</name>
+            <url>https://mirrors.huaweicloud.com/repository/maven/</url>
+        </repository>
+
         <repository>
             <id>alimaven</id>
             <name>aliyun maven</name>
