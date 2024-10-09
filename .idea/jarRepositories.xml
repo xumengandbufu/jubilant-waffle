@@ -17,6 +17,11 @@
       <option name="url" value="https://maven.aliyun.com/repository/spring" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="huaweicloud" />
+      <option name="name" value="huawei maven mirror" />
+      <option name="url" value="https://mirrors.huaweicloud.com/repository/maven/" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="spring-plugin" />
       <option name="name" value="aliyun spring-plugin" />
       <option name="url" value="https://maven.aliyun.com/repository/spring-plugin" />
