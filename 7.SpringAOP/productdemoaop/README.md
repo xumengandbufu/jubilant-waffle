@@ -71,7 +71,7 @@
 ## 编译打包productdemo
 在安装了maven和jdk的节点上编译打包productdemoaop
 
-### 编译productdemo
+### 编译productdemoaop
 将代码从服务器上克隆下来，`git clone https://codehub.devcloud.cn-north-4.huaweicloud.com/OOMALL00024/JavaEEPlatform.git`
 <br>在JavaEEPlatform/7.SpringAOP/productdemoaop目录下运行
 <br>`mvn clean pre-integration-test -Dmaven.test.skip=true`
