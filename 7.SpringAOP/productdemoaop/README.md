@@ -46,10 +46,10 @@
 <br>MySQL的配置文件目录conf.d和数据库初始化脚本都在productdemo的mysql目录下，需要把这些文件拷贝到运行mysql的节点上，并映射到容器中。同时在root目录建立mysql/log和mysql/data分别用来存放mysql的日志和数据库文件
 <br>用`chmod a+wr mysql/log`将日志目录赋予所有人读写的权限，mysql/data目录也做相同处理 
 <br>用以下命令创建mysql
-<br>`docker service create --name mysql --with-registry-auth --constraint node.labels.server==mysql --publish published=3306,target=3306 --mount type=bind,src=/root/JavaEEPlatform/5.MyBatis/productdemo/mysql/sql,dst=/sql,readonly --mount type=bind,src=/root/JavaEEPlatform/5.MyBatis/productdemo/mysql/conf.d,dst=/etc/mysql/conf.d,readonly --mount type=bind,src=/root/mysql/log,dst=/var/log/mysql --mount type=bind,src=/root/mysql/data,dst=/var/lib/mysql  --network my-net -e MYSQL_ROOT_PASSWORD=123456  -d swr.cn-north-4.myhuaweicloud.com/oomall-javaee/mysql:latest`
+<br>`docker service create --name mysql --with-registry-auth --constraint node.labels.server==mysql --publish published=3306,target=3306 --mount type=bind,src=/root/JavaEEPlatform/7.SpringAOP/productdemoaop/mysql/sql,dst=/sql,readonly --mount type=bind,src=/root/JavaEEPlatform/7.SpringAOP/productdemoaop/mysql/conf.d,dst=/etc/mysql/conf.d,readonly --mount type=bind,src=/root/mysql/log,dst=/var/log/mysql --mount type=bind,src=/root/mysql/data,dst=/var/lib/mysql  --network my-net -e MYSQL_ROOT_PASSWORD=123456  -d swr.cn-north-4.myhuaweicloud.com/oomall-javaee/mysql:latest`
 <br>其中 `--with-registry-auth`是带token访问私有镜像，如果访问官方公开镜像无需此参数
-<br>`--mount type=bind,src=/root/OOMALL/mysql/sql,dst=/sql,readonly`是将OOMALL的数据SQL脚本mount到容器中
-<br>`--mount type=bind,src=/root/OOMALL/mysql/conf.d,dst=/etc/mysql/conf.d,readonly`是将OOMALL中的MySQL设置mount到容器中
+<br>`--mount type=bind,src=/root/7.SpringAOP/productdemoaop/mysql/sql,dst=/sql,readonly`是将OOMALL的数据SQL脚本mount到容器中
+<br>`--mount type=bind,src=/root/7.SpringAOP/productdemoaop/mysql/conf.d,dst=/etc/mysql/conf.d,readonly`是将OOMALL中的MySQL设置mount到容器中
 <br>`--mount type=bind,src=/root/mysql/log,dst=/var/log/mysql`是将操作系统的`/root/mysql/log`mount到容器中的MySQL日志目录，这样在操作系统里就能看到mysql的日志
 <br>`--mount type=bind,src=/root/mysql/data,dst=/var/lib/mysql`是将操作系统的`/root/mysql/data`mount到容器中的MySQL数据目录，这样将数据库数据存储在操作系统的目录下
 <br>`-e MYSQL_ROOT_PASSWORD=123456`是设定数据库root账户密码<br>
@@ -68,7 +68,7 @@
 用`use oomall_demo`切换数据库<br>
 用`source /sql/product.sql`插入初始数据
 
-## 编译打包productdemo
+## 编译打包productdemoaop
 在安装了maven和jdk的节点上编译打包productdemoaop
 
 ### 编译productdemoaop
@@ -92,4 +92,20 @@
 <br>在部署的节点上的logs目录用`tail -f productdemoaop.log`看日志文件的内容
 
 ## 测试productdemoaop服务
+
+### 安装配置Jmeter
+从[https://dlcdn.apache.org//jmeter/binaries/apache-jmeter-5.6.3.zip](https://dlcdn.apache.org//jmeter/binaries/apache-jmeter-5.6.3.zip)下载Jmeter
+<br>`wget https://dlcdn.apache.org//jmeter/binaries/apache-jmeter-5.6.3.zip`
+<br>`unzip apache-jmeter-5.6.3.zip`将压缩文件解压
+<br>由于服务器内存只有1G，需要修改jmeter的配置，才能将jmeter运行起来。在jmeter的bin目录下新建setenv.sh配置文件，在文件中增加以下内容
+<br>`export JVM_ARGS="-Xms256m -Xmx256m -XX:MaxMetaspaceSize=256m"`
+<br>修改jmeter报告的采样间隔，从60秒修改为1秒，jmeter的bin目录下的user.properties文件中的`jmeter.reportgenerator.overall_granularity=60000`将其改为`jmeter.reportgenerator.overall_granularity=1000`
+<br>修改root目录下的.profile文件，在文件最后增加
+<br>`export PATH=/root/apache-jmeter-5.6.3/bin:$PATH`将jmeter增加到运行路径里
+
+### 测试productdemoaop
+修改jmx文件中的hostname，改为swarm集群的内部ip，运行
+<br>`jmeter -n -t ReadProduct.jmx -l Read100-20.jtl -e -o Read/100-20`对productdemoaop进行测试
+
+
 
