@@ -2,10 +2,6 @@
 
 package cn.edu.xmu.javaee.productdemo.mapper.manual;
 
-import cn.edu.xmu.javaee.productdemo.mapper.generator.ProductPoSqlProvider;
-import cn.edu.xmu.javaee.productdemo.mapper.generator.po.OnSalePo;
-import cn.edu.xmu.javaee.productdemo.mapper.generator.po.ProductPo;
-import cn.edu.xmu.javaee.productdemo.mapper.generator.po.ProductPoExample;
 import cn.edu.xmu.javaee.productdemo.mapper.manual.po.ProductAllPo;
 import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.type.JdbcType;

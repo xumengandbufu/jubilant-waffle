@@ -108,6 +108,12 @@
     <!--    maven的仓库-->
     <repositories>
         <repository>
+            <id>huaweicloud</id>
+            <name>huawei maven mirror</name>
+            <url>https://mirrors.huaweicloud.com/repository/maven/</url>
+        </repository>
+
+        <repository>
             <id>alimaven</id>
             <name>aliyun maven</name>
             <url>http://maven.aliyun.com/nexus/content/groups/public/</url>

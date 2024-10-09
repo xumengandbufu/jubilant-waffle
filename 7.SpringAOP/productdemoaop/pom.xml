@@ -110,7 +110,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-                <version>3.1.0</version>
+                <version>3.4.1</version>
                 <executions>
                     <execution>
                         <id>remove-docker-image</id>
@@ -179,7 +179,8 @@
     <repositories>
         <repository>
             <id>huaweicloud</id>
-            <url>https://repo.huaweicloud.com/repository/maven/</url>
+            <name>huawei maven mirror</name>
+            <url>https://mirrors.huaweicloud.com/repository/maven/</url>
         </repository>
         <repository>
             <id>public</id>

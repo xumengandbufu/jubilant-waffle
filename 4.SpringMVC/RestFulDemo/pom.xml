@@ -17,7 +17,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <fasterxml.version>2.15.2</fasterxml.version>
+        <fasterxml.version>2.18.0</fasterxml.version>
         <java.version>17</java.version>
     </properties>
 
@@ -118,6 +118,12 @@
 
     <!--    maven的仓库-->
     <repositories>
+        <repository>
+            <id>huaweicloud</id>
+            <name>huawei maven mirror</name>
+            <url>https://mirrors.huaweicloud.com/repository/maven/</url>
+        </repository>
+
         <repository>
             <id>alimaven</id>
             <name>aliyun maven</name>
