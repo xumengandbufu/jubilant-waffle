@@ -17,13 +17,13 @@
     <groupId>cn.edu.xmu.javaee</groupId>
 
     <!--    工程的标识。它通常是工程的名称。-->
-    <artifactId>autowiredemo</artifactId>
+    <artifactId>springbootadmin</artifactId>
 
     <!--    工程的版本号。在 artifact 的仓库中，它用来区分不同的版本。-->
     <version>0.0.1-SNAPSHOT</version>
 
-    <name>autowiredemo</name>
-    <description>Demo project for Spring Boot</description>
+    <name>springbootadmin</name>
+    <description>Spring Boot Admin Server</description>
 
     <!--    打包的格式-->
     <packaging>jar</packaging>
@@ -36,26 +36,15 @@
     <!--    定义依赖关系-->
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-starter-client</artifactId>
+            <artifactId>spring-boot-admin-server</artifactId>
             <version>1.4.3</version>
         </dependency>
-
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-server-ui</artifactId>
+            <version>1.4.3</version>
+        </dependency>
 
     </dependencies>
 
@@ -114,12 +103,6 @@
 
     <!--    maven的仓库-->
     <repositories>
-        <repository>
-            <id>huaweicloud</id>
-            <name>huawei maven mirror</name>
-            <url>https://mirrors.huaweicloud.com/repository/maven/</url>
-        </repository>
-
         <repository>
             <id>alimaven</id>
             <name>aliyun maven</name>
