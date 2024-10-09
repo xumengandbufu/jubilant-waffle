@@ -7,6 +7,8 @@ import cn.edu.xmu.javaee.productdemo.controller.vo.ProductVo;
 import cn.edu.xmu.javaee.productdemo.dao.bo.OnSale;
 import cn.edu.xmu.javaee.productdemo.dao.bo.Product;
 import cn.edu.xmu.javaee.productdemo.dao.bo.User;
+import cn.edu.xmu.javaee.productdemo.mapper.generator.po.OnSalePo;
+import cn.edu.xmu.javaee.productdemo.mapper.generator.po.ProductPo;
 import cn.edu.xmu.javaee.productdemo.mapper.manual.po.ProductAllPo;
 
 import java.util.stream.Collectors;

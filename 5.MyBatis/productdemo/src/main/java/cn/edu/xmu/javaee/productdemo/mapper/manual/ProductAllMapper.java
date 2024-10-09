@@ -2,6 +2,10 @@
 
 package cn.edu.xmu.javaee.productdemo.mapper.manual;
 
+import cn.edu.xmu.javaee.productdemo.mapper.generator.ProductPoSqlProvider;
+import cn.edu.xmu.javaee.productdemo.mapper.generator.po.OnSalePo;
+import cn.edu.xmu.javaee.productdemo.mapper.generator.po.ProductPo;
+import cn.edu.xmu.javaee.productdemo.mapper.generator.po.ProductPoExample;
 import cn.edu.xmu.javaee.productdemo.mapper.manual.po.ProductAllPo;
 import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.type.JdbcType;
@@ -11,7 +15,7 @@ import java.util.List;
 @Mapper
 public interface ProductAllMapper {
 
-    @SelectProvider(type=ProductPoSqlProvider.class, method="selectByExample")
+    @SelectProvider(type= ProductPoSqlProvider.class, method="selectByExample")
     @Results({
             @Result(column="id", property="id", jdbcType=JdbcType.BIGINT, id=true),
             @Result(column="sku_sn", property="skuSn", jdbcType=JdbcType.VARCHAR),
