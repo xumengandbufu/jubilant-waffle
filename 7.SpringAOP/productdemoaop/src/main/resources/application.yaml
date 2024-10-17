@@ -7,6 +7,12 @@ management:
 server:
   #服务端口号
   port: 8080
+  tomcat:
+    threads:
+      #最大工作线程数
+      max: 100
+      #最小工作线程数
+      min-spare: 50
 
 spring:
   datasource:
