@@ -1,0 +1,208 @@
+2024-10-29 08:53:38.209 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-10-29 08:53:38.235 [main] INFO  c.e.x.j.p.controller.AdminProductControllerTest - Starting AdminProductControllerTest using Java 19.0.2 with PID 21588 (started by bufu in D:\Service_learn\JavaEEPlatform1\7.SpringAOP\productdemoaop)
+2024-10-29 08:53:38.236 [main] DEBUG c.e.x.j.p.controller.AdminProductControllerTest - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-29 08:53:38.236 [main] INFO  c.e.x.j.p.controller.AdminProductControllerTest - No active profile set, falling back to 1 default profile: "default"
+2024-10-29 08:53:41.727 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-10-29 08:53:41.727 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2024-10-29 08:53:41.748 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 14 endpoints beneath base path '/actuator'
+2024-10-29 08:53:41.776 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 47 ms
+2024-10-29 08:53:41.860 [main] INFO  c.e.x.j.p.controller.AdminProductControllerTest - Started AdminProductControllerTest in 3.859 seconds (process running for 4.982)
+2024-10-29 08:53:41.964 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-10-29 08:53:43.657 [main] DEBUG c.e.x.j.p.m.g.P.updateByPrimaryKeySelective - ==>  Preparing: UPDATE goods_product SET `name` = ?, `original_price` = ?, `modifier_id` = ?, `gmt_modified` = ?, `status` = ? WHERE (`id` = ?)
+2024-10-29 08:53:43.676 [main] DEBUG c.e.x.j.p.m.g.P.updateByPrimaryKeySelective - ==> Parameters: 奶糖(String), 200(Long), 1580(Long), 2024-10-29T08:53:43.644917600(LocalDateTime), 0(Byte), 1580(Long)
+2024-10-29 08:53:43.823 [main] DEBUG c.e.x.j.p.m.g.P.updateByPrimaryKeySelective - <==    Updates: 1
+2024-10-29 08:53:43.866 [main] DEBUG c.e.x.j.p.controller.AdminProductController - getProductById: id = 1580 
+2024-10-29 08:53:43.867 [main] DEBUG c.e.x.javaee.productdemoaop.service.ProductService - findProductById: id = 1580, all = false
+2024-10-29 08:53:43.868 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - ==>  Preparing: select `id`, `shop_id`, `goods_id`, `category_id`, `template_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `status`, `commission_ratio`, `shop_logistic_id`, `free_threshold` from goods_product where `id` = ?
+2024-10-29 08:53:43.868 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - ==> Parameters: 1580(Long)
+2024-10-29 08:53:43.933 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - <==      Total: 1
+2024-10-29 08:53:44.119 [main] DEBUG c.e.x.j.p.m.g.P.updateByPrimaryKeySelective - ==>  Preparing: UPDATE goods_product SET `name` = ?, `original_price` = ?, `modifier_id` = ?, `gmt_modified` = ?, `status` = ? WHERE (`id` = ?)
+2024-10-29 08:53:44.120 [main] DEBUG c.e.x.j.p.m.g.P.updateByPrimaryKeySelective - ==> Parameters: 奶糖(String), 200(Long), 158011(Long), 2024-10-29T08:53:44.119775(LocalDateTime), 0(Byte), 158011(Long)
+2024-10-29 08:53:44.225 [main] DEBUG c.e.x.j.p.m.g.P.updateByPrimaryKeySelective - <==    Updates: 0
+2024-10-29 08:53:44.225 [main] INFO  cn.edu.xmu.javaee.core.aop.ControllerAspect - doAround: BusinessException， errno = RESOURCE_ID_NOTEXIST
+2024-10-29 08:53:44.394 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.deleteByPrimaryKey - ==>  Preparing: delete from goods_product where `id` = ?
+2024-10-29 08:53:44.395 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.deleteByPrimaryKey - ==> Parameters: 1580(Long)
+2024-10-29 08:53:44.532 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.deleteByPrimaryKey - <==    Updates: 1
+2024-10-29 08:53:44.535 [main] DEBUG c.e.x.j.p.controller.AdminProductController - getProductById: id = 1580 
+2024-10-29 08:53:44.535 [main] DEBUG c.e.x.javaee.productdemoaop.service.ProductService - findProductById: id = 1580, all = false
+2024-10-29 08:53:44.535 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - ==>  Preparing: select `id`, `shop_id`, `goods_id`, `category_id`, `template_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `status`, `commission_ratio`, `shop_logistic_id`, `free_threshold` from goods_product where `id` = ?
+2024-10-29 08:53:44.536 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - ==> Parameters: 1580(Long)
+2024-10-29 08:53:44.596 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - <==      Total: 0
+2024-10-29 08:53:44.597 [main] INFO  cn.edu.xmu.javaee.core.aop.ControllerAspect - doAround: BusinessException， errno = RESOURCE_ID_NOTEXIST
+2024-10-29 08:53:44.779 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.deleteByPrimaryKey - ==>  Preparing: delete from goods_product where `id` = ?
+2024-10-29 08:53:44.779 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.deleteByPrimaryKey - ==> Parameters: 1580112(Long)
+2024-10-29 08:53:44.883 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.deleteByPrimaryKey - <==    Updates: 0
+2024-10-29 08:53:44.884 [main] INFO  cn.edu.xmu.javaee.core.aop.ControllerAspect - doAround: BusinessException， errno = RESOURCE_ID_NOTEXIST
+2024-10-29 08:53:45.054 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.insertSelective - ==>  Preparing: INSERT INTO goods_product (`name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `gmt_create`, `status`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2024-10-29 08:53:45.055 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.insertSelective - ==> Parameters: 水果糖(String), 100(Long), 807(Long), 1234455(String), 盒(String), 长沙(String), 2024-10-29T08:53:45.054548800(LocalDateTime), 0(Byte)
+2024-10-29 08:53:45.172 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.insertSelective - <==    Updates: 1
+2024-10-29 08:53:45.172 [main] DEBUG c.e.x.j.p.m.g.P.insertSelective!selectKey - ==>  Preparing: SELECT LAST_INSERT_ID()
+2024-10-29 08:53:45.172 [main] DEBUG c.e.x.j.p.m.g.P.insertSelective!selectKey - ==> Parameters: 
+2024-10-29 08:53:45.228 [main] DEBUG c.e.x.j.p.m.g.P.insertSelective!selectKey - <==      Total: 1
+2024-10-29 08:53:45.241 [main] DEBUG c.e.x.j.p.controller.AdminProductController - getProductById: id = 5466 
+2024-10-29 08:53:45.241 [main] DEBUG c.e.x.javaee.productdemoaop.service.ProductService - findProductById: id = 5466, all = false
+2024-10-29 08:53:45.241 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - ==>  Preparing: select `id`, `shop_id`, `goods_id`, `category_id`, `template_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `status`, `commission_ratio`, `shop_logistic_id`, `free_threshold` from goods_product where `id` = ?
+2024-10-29 08:53:45.242 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - ==> Parameters: 5466(Long)
+2024-10-29 08:53:45.298 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - <==      Total: 1
+2024-10-29 08:53:45.478 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByExample - ==>  Preparing: SELECT `id`, `shop_id`, `goods_id`, `category_id`, `template_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `status`, `commission_ratio`, `shop_logistic_id`, `free_threshold` FROM goods_product WHERE ((`name` = ?))
+2024-10-29 08:53:45.478 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByExample - ==> Parameters: 奥利奥缤纷双果味(String)
+2024-10-29 08:53:45.565 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByExample - <==      Total: 1
+2024-10-29 08:53:45.749 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByExample - ==>  Preparing: SELECT `id`, `shop_id`, `goods_id`, `category_id`, `template_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `status`, `commission_ratio`, `shop_logistic_id`, `free_threshold` FROM goods_product WHERE ((`name` = ?))
+2024-10-29 08:53:45.749 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByExample - ==> Parameters: 奥(String)
+2024-10-29 08:53:45.809 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByExample - <==      Total: 0
+2024-10-29 08:53:45.981 [main] DEBUG c.e.x.j.p.controller.AdminProductController - getProductById: id = 1550 
+2024-10-29 08:53:45.981 [main] DEBUG c.e.x.javaee.productdemoaop.service.ProductService - findProductById: id = 1550, all = false
+2024-10-29 08:53:45.981 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - ==>  Preparing: select `id`, `shop_id`, `goods_id`, `category_id`, `template_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `status`, `commission_ratio`, `shop_logistic_id`, `free_threshold` from goods_product where `id` = ?
+2024-10-29 08:53:45.982 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - ==> Parameters: 1550(Long)
+2024-10-29 08:53:46.035 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - <==      Total: 1
+2024-10-29 08:53:46.198 [main] DEBUG c.e.x.j.p.controller.AdminProductController - getProductById: id = 1550122 
+2024-10-29 08:53:46.199 [main] DEBUG c.e.x.javaee.productdemoaop.service.ProductService - findProductById: id = 1550122, all = false
+2024-10-29 08:53:46.199 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - ==>  Preparing: select `id`, `shop_id`, `goods_id`, `category_id`, `template_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `status`, `commission_ratio`, `shop_logistic_id`, `free_threshold` from goods_product where `id` = ?
+2024-10-29 08:53:46.199 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - ==> Parameters: 1550122(Long)
+2024-10-29 08:53:46.254 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - <==      Total: 0
+2024-10-29 08:53:46.254 [main] INFO  cn.edu.xmu.javaee.core.aop.ControllerAspect - doAround: BusinessException， errno = RESOURCE_ID_NOTEXIST
+2024-10-29 08:53:46.662 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductWithAll - ==>  Preparing: SELECT `id`, `shop_id`, `goods_id`, `category_id`, `template_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `status`, `commission_ratio`, `shop_logistic_id`, `free_threshold` FROM goods_product WHERE ((`name` = ?))
+2024-10-29 08:53:46.663 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductWithAll - ==> Parameters: 圣峰冰茶牙膏(String)
+2024-10-29 08:53:46.722 [main] DEBUG c.e.x.j.p.m.m.P.selectLastOnSaleByProductId - ====>  Preparing: select `id`, `product_id`, `price`, `begin_time`, `end_time`, `quantity`, `max_quantity`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified` from goods_onsale where `product_id` = ? and `begin_time` <= NOW() and `end_time` > NOW()
+2024-10-29 08:53:46.722 [main] DEBUG c.e.x.j.p.m.m.P.selectLastOnSaleByProductId - ====> Parameters: 1605(Long)
+2024-10-29 08:53:46.779 [main] DEBUG c.e.x.j.p.m.m.P.selectLastOnSaleByProductId - <====      Total: 1
+2024-10-29 08:53:46.779 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.selectOtherProduct - ====>  Preparing: select `id`, `goods_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified` from goods_product where `goods_id` = ?
+2024-10-29 08:53:46.779 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.selectOtherProduct - ====> Parameters: 221(Long)
+2024-10-29 08:53:46.839 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.selectOtherProduct - <====      Total: 4
+2024-10-29 08:53:46.839 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductWithAll - <==      Total: 1
+2024-10-29 08:53:47.006 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductWithAll - ==>  Preparing: SELECT `id`, `shop_id`, `goods_id`, `category_id`, `template_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `status`, `commission_ratio`, `shop_logistic_id`, `free_threshold` FROM goods_product WHERE ((`name` = ?))
+2024-10-29 08:53:47.007 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductWithAll - ==> Parameters: 奥(String)
+2024-10-29 08:53:47.063 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductWithAll - <==      Total: 0
+2024-10-29 08:53:47.229 [main] DEBUG c.e.x.j.p.controller.ProductController - getProductById: id = 1550 
+2024-10-29 08:53:47.229 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductJOINAll - ==>  Preparing: SELECT `p`.`id`, `goods_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `p`.`creator_id`, `p`.`creator_name`, `p`.`modifier_id`, `p`.`modifier_name`, `p`.`gmt_create`, `p`.`gmt_modified`, `os`.`id` FROM goods_product p LEFT JOIN goods_onsale os ON `p`.`id` = `os`.`id` WHERE `goods_id` = ?
+2024-10-29 08:53:47.230 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductJOINAll - ==> Parameters: 1550(Long)
+2024-10-29 08:53:47.288 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductJOINAll - <==      Total: 0
+2024-10-29 08:53:47.289 [main] INFO  cn.edu.xmu.javaee.core.aop.ControllerAspect - doAround: BusinessException， errno = RESOURCE_ID_NOTEXIST
+2024-10-29 08:53:47.451 [main] DEBUG c.e.x.j.p.controller.ProductController - getProductById: id = 1550122 
+2024-10-29 08:53:47.456 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductJOINAll - ==>  Preparing: SELECT `p`.`id`, `goods_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `p`.`creator_id`, `p`.`creator_name`, `p`.`modifier_id`, `p`.`modifier_name`, `p`.`gmt_create`, `p`.`gmt_modified`, `os`.`id` FROM goods_product p LEFT JOIN goods_onsale os ON `p`.`id` = `os`.`id` WHERE `goods_id` = ?
+2024-10-29 08:53:47.458 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductJOINAll - ==> Parameters: 1550122(Long)
+2024-10-29 08:53:47.514 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductJOINAll - <==      Total: 0
+2024-10-29 08:53:47.515 [main] INFO  cn.edu.xmu.javaee.core.aop.ControllerAspect - doAround: BusinessException， errno = RESOURCE_ID_NOTEXIST
+2024-10-29 08:53:47.677 [main] DEBUG c.e.x.j.p.controller.ProductController - getProductById: id = 1574 
+2024-10-29 08:53:47.678 [main] DEBUG c.e.x.javaee.productdemoaop.service.ProductService - findProductById_manual: id = 1574
+2024-10-29 08:53:47.678 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductWithAll - ==>  Preparing: SELECT `id`, `shop_id`, `goods_id`, `category_id`, `template_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `status`, `commission_ratio`, `shop_logistic_id`, `free_threshold` FROM goods_product WHERE ((`id` = ?))
+2024-10-29 08:53:47.679 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductWithAll - ==> Parameters: 1574(Long)
+2024-10-29 08:53:47.733 [main] DEBUG c.e.x.j.p.m.m.P.selectLastOnSaleByProductId - ====>  Preparing: select `id`, `product_id`, `price`, `begin_time`, `end_time`, `quantity`, `max_quantity`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified` from goods_onsale where `product_id` = ? and `begin_time` <= NOW() and `end_time` > NOW()
+2024-10-29 08:53:47.733 [main] DEBUG c.e.x.j.p.m.m.P.selectLastOnSaleByProductId - ====> Parameters: 1574(Long)
+2024-10-29 08:53:47.797 [main] DEBUG c.e.x.j.p.m.m.P.selectLastOnSaleByProductId - <====      Total: 1
+2024-10-29 08:53:47.797 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.selectOtherProduct - ====>  Preparing: select `id`, `goods_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified` from goods_product where `goods_id` = ?
+2024-10-29 08:53:47.798 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.selectOtherProduct - ====> Parameters: 393(Long)
+2024-10-29 08:53:47.865 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.selectOtherProduct - <====      Total: 7
+2024-10-29 08:53:47.865 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductWithAll - <==      Total: 1
+2024-10-29 08:53:48.035 [main] DEBUG c.e.x.j.p.controller.ProductController - getProductById: id = 1550122 
+2024-10-29 08:53:48.035 [main] DEBUG c.e.x.javaee.productdemoaop.service.ProductService - findProductById_manual: id = 1550122
+2024-10-29 08:53:48.035 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductWithAll - ==>  Preparing: SELECT `id`, `shop_id`, `goods_id`, `category_id`, `template_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `status`, `commission_ratio`, `shop_logistic_id`, `free_threshold` FROM goods_product WHERE ((`id` = ?))
+2024-10-29 08:53:48.036 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductWithAll - ==> Parameters: 1550122(Long)
+2024-10-29 08:53:48.090 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductWithAll - <==      Total: 0
+2024-10-29 08:53:48.090 [main] INFO  cn.edu.xmu.javaee.core.aop.ControllerAspect - doAround: BusinessException， errno = RESOURCE_ID_NOTEXIST
+2024-10-29 08:53:48.220 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2024-10-29 08:53:48.223 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2024-10-29 08:55:06.632 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-10-29 08:55:06.656 [main] INFO  c.e.x.j.p.controller.AdminProductControllerTest - Starting AdminProductControllerTest using Java 19.0.2 with PID 27276 (started by bufu in D:\Service_learn\JavaEEPlatform1\7.SpringAOP\productdemoaop)
+2024-10-29 08:55:06.656 [main] DEBUG c.e.x.j.p.controller.AdminProductControllerTest - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-29 08:55:06.657 [main] INFO  c.e.x.j.p.controller.AdminProductControllerTest - No active profile set, falling back to 1 default profile: "default"
+2024-10-29 08:55:10.222 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-10-29 08:55:10.223 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2024-10-29 08:55:10.240 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 14 endpoints beneath base path '/actuator'
+2024-10-29 08:55:10.265 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 40 ms
+2024-10-29 08:55:10.320 [main] INFO  c.e.x.j.p.controller.AdminProductControllerTest - Started AdminProductControllerTest in 3.881 seconds (process running for 4.919)
+2024-10-29 08:55:10.413 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-10-29 08:55:12.480 [main] DEBUG c.e.x.j.p.m.g.P.updateByPrimaryKeySelective - ==>  Preparing: UPDATE goods_product SET `name` = ?, `original_price` = ?, `modifier_id` = ?, `gmt_modified` = ?, `status` = ? WHERE (`id` = ?)
+2024-10-29 08:55:12.494 [main] DEBUG c.e.x.j.p.m.g.P.updateByPrimaryKeySelective - ==> Parameters: 奶糖(String), 200(Long), 1580(Long), 2024-10-29T08:55:12.467184700(LocalDateTime), 0(Byte), 1580(Long)
+2024-10-29 08:55:12.642 [main] DEBUG c.e.x.j.p.m.g.P.updateByPrimaryKeySelective - <==    Updates: 1
+2024-10-29 08:55:12.682 [main] DEBUG c.e.x.j.p.controller.AdminProductController - getProductById: id = 1580 
+2024-10-29 08:55:12.683 [main] DEBUG c.e.x.javaee.productdemoaop.service.ProductService - findProductById: id = 1580, all = false
+2024-10-29 08:55:12.684 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - ==>  Preparing: select `id`, `shop_id`, `goods_id`, `category_id`, `template_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `status`, `commission_ratio`, `shop_logistic_id`, `free_threshold` from goods_product where `id` = ?
+2024-10-29 08:55:12.684 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - ==> Parameters: 1580(Long)
+2024-10-29 08:55:12.752 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - <==      Total: 1
+2024-10-29 08:55:12.955 [main] DEBUG c.e.x.j.p.m.g.P.updateByPrimaryKeySelective - ==>  Preparing: UPDATE goods_product SET `name` = ?, `original_price` = ?, `modifier_id` = ?, `gmt_modified` = ?, `status` = ? WHERE (`id` = ?)
+2024-10-29 08:55:12.955 [main] DEBUG c.e.x.j.p.m.g.P.updateByPrimaryKeySelective - ==> Parameters: 奶糖(String), 200(Long), 158011(Long), 2024-10-29T08:55:12.953549800(LocalDateTime), 0(Byte), 158011(Long)
+2024-10-29 08:55:13.060 [main] DEBUG c.e.x.j.p.m.g.P.updateByPrimaryKeySelective - <==    Updates: 0
+2024-10-29 08:55:13.062 [main] INFO  cn.edu.xmu.javaee.core.aop.ControllerAspect - doAround: BusinessException， errno = RESOURCE_ID_NOTEXIST
+2024-10-29 08:55:13.229 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.deleteByPrimaryKey - ==>  Preparing: delete from goods_product where `id` = ?
+2024-10-29 08:55:13.230 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.deleteByPrimaryKey - ==> Parameters: 1580(Long)
+2024-10-29 08:55:13.337 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.deleteByPrimaryKey - <==    Updates: 1
+2024-10-29 08:55:13.340 [main] DEBUG c.e.x.j.p.controller.AdminProductController - getProductById: id = 1580 
+2024-10-29 08:55:13.340 [main] DEBUG c.e.x.javaee.productdemoaop.service.ProductService - findProductById: id = 1580, all = false
+2024-10-29 08:55:13.341 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - ==>  Preparing: select `id`, `shop_id`, `goods_id`, `category_id`, `template_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `status`, `commission_ratio`, `shop_logistic_id`, `free_threshold` from goods_product where `id` = ?
+2024-10-29 08:55:13.341 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - ==> Parameters: 1580(Long)
+2024-10-29 08:55:13.395 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - <==      Total: 0
+2024-10-29 08:55:13.396 [main] INFO  cn.edu.xmu.javaee.core.aop.ControllerAspect - doAround: BusinessException， errno = RESOURCE_ID_NOTEXIST
+2024-10-29 08:55:13.565 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.deleteByPrimaryKey - ==>  Preparing: delete from goods_product where `id` = ?
+2024-10-29 08:55:13.565 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.deleteByPrimaryKey - ==> Parameters: 1580112(Long)
+2024-10-29 08:55:13.672 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.deleteByPrimaryKey - <==    Updates: 0
+2024-10-29 08:55:13.672 [main] INFO  cn.edu.xmu.javaee.core.aop.ControllerAspect - doAround: BusinessException， errno = RESOURCE_ID_NOTEXIST
+2024-10-29 08:55:13.848 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.insertSelective - ==>  Preparing: INSERT INTO goods_product (`name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `gmt_create`, `status`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2024-10-29 08:55:13.849 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.insertSelective - ==> Parameters: 水果糖(String), 100(Long), 807(Long), 1234455(String), 盒(String), 长沙(String), 2024-10-29T08:55:13.847087700(LocalDateTime), 0(Byte)
+2024-10-29 08:55:13.955 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.insertSelective - <==    Updates: 1
+2024-10-29 08:55:13.955 [main] DEBUG c.e.x.j.p.m.g.P.insertSelective!selectKey - ==>  Preparing: SELECT LAST_INSERT_ID()
+2024-10-29 08:55:13.955 [main] DEBUG c.e.x.j.p.m.g.P.insertSelective!selectKey - ==> Parameters: 
+2024-10-29 08:55:14.011 [main] DEBUG c.e.x.j.p.m.g.P.insertSelective!selectKey - <==      Total: 1
+2024-10-29 08:55:14.028 [main] DEBUG c.e.x.j.p.controller.AdminProductController - getProductById: id = 5467 
+2024-10-29 08:55:14.029 [main] DEBUG c.e.x.javaee.productdemoaop.service.ProductService - findProductById: id = 5467, all = false
+2024-10-29 08:55:14.029 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - ==>  Preparing: select `id`, `shop_id`, `goods_id`, `category_id`, `template_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `status`, `commission_ratio`, `shop_logistic_id`, `free_threshold` from goods_product where `id` = ?
+2024-10-29 08:55:14.029 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - ==> Parameters: 5467(Long)
+2024-10-29 08:55:14.083 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - <==      Total: 1
+2024-10-29 08:55:14.251 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByExample - ==>  Preparing: SELECT `id`, `shop_id`, `goods_id`, `category_id`, `template_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `status`, `commission_ratio`, `shop_logistic_id`, `free_threshold` FROM goods_product WHERE ((`name` = ?))
+2024-10-29 08:55:14.251 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByExample - ==> Parameters: 奥利奥缤纷双果味(String)
+2024-10-29 08:55:14.328 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByExample - <==      Total: 1
+2024-10-29 08:55:14.501 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByExample - ==>  Preparing: SELECT `id`, `shop_id`, `goods_id`, `category_id`, `template_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `status`, `commission_ratio`, `shop_logistic_id`, `free_threshold` FROM goods_product WHERE ((`name` = ?))
+2024-10-29 08:55:14.502 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByExample - ==> Parameters: 奥(String)
+2024-10-29 08:55:14.560 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByExample - <==      Total: 0
+2024-10-29 08:55:14.720 [main] DEBUG c.e.x.j.p.controller.AdminProductController - getProductById: id = 1550 
+2024-10-29 08:55:14.720 [main] DEBUG c.e.x.javaee.productdemoaop.service.ProductService - findProductById: id = 1550, all = false
+2024-10-29 08:55:14.721 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - ==>  Preparing: select `id`, `shop_id`, `goods_id`, `category_id`, `template_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `status`, `commission_ratio`, `shop_logistic_id`, `free_threshold` from goods_product where `id` = ?
+2024-10-29 08:55:14.721 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - ==> Parameters: 1550(Long)
+2024-10-29 08:55:14.779 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - <==      Total: 1
+2024-10-29 08:55:14.941 [main] DEBUG c.e.x.j.p.controller.AdminProductController - getProductById: id = 1550122 
+2024-10-29 08:55:14.942 [main] DEBUG c.e.x.javaee.productdemoaop.service.ProductService - findProductById: id = 1550122, all = false
+2024-10-29 08:55:14.942 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - ==>  Preparing: select `id`, `shop_id`, `goods_id`, `category_id`, `template_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `status`, `commission_ratio`, `shop_logistic_id`, `free_threshold` from goods_product where `id` = ?
+2024-10-29 08:55:14.943 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - ==> Parameters: 1550122(Long)
+2024-10-29 08:55:14.995 [main] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - <==      Total: 0
+2024-10-29 08:55:14.996 [main] INFO  cn.edu.xmu.javaee.core.aop.ControllerAspect - doAround: BusinessException， errno = RESOURCE_ID_NOTEXIST
+2024-10-29 08:55:15.400 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductWithAll - ==>  Preparing: SELECT `id`, `shop_id`, `goods_id`, `category_id`, `template_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `status`, `commission_ratio`, `shop_logistic_id`, `free_threshold` FROM goods_product WHERE ((`name` = ?))
+2024-10-29 08:55:15.400 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductWithAll - ==> Parameters: 圣峰冰茶牙膏(String)
+2024-10-29 08:55:15.459 [main] DEBUG c.e.x.j.p.m.m.P.selectLastOnSaleByProductId - ====>  Preparing: select `id`, `product_id`, `price`, `begin_time`, `end_time`, `quantity`, `max_quantity`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified` from goods_onsale where `product_id` = ? and `begin_time` <= NOW() and `end_time` > NOW()
+2024-10-29 08:55:15.460 [main] DEBUG c.e.x.j.p.m.m.P.selectLastOnSaleByProductId - ====> Parameters: 1605(Long)
+2024-10-29 08:55:15.517 [main] DEBUG c.e.x.j.p.m.m.P.selectLastOnSaleByProductId - <====      Total: 1
+2024-10-29 08:55:15.517 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.selectOtherProduct - ====>  Preparing: select `id`, `goods_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified` from goods_product where `goods_id` = ?
+2024-10-29 08:55:15.517 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.selectOtherProduct - ====> Parameters: 221(Long)
+2024-10-29 08:55:15.574 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.selectOtherProduct - <====      Total: 4
+2024-10-29 08:55:15.574 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductWithAll - <==      Total: 1
+2024-10-29 08:55:15.739 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductWithAll - ==>  Preparing: SELECT `id`, `shop_id`, `goods_id`, `category_id`, `template_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `status`, `commission_ratio`, `shop_logistic_id`, `free_threshold` FROM goods_product WHERE ((`name` = ?))
+2024-10-29 08:55:15.739 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductWithAll - ==> Parameters: 奥(String)
+2024-10-29 08:55:15.795 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductWithAll - <==      Total: 0
+2024-10-29 08:55:15.955 [main] DEBUG c.e.x.j.p.controller.ProductController - getProductById: id = 1550 
+2024-10-29 08:55:15.956 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductJOINAll - ==>  Preparing: SELECT `p`.`id`, `goods_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `p`.`creator_id`, `p`.`creator_name`, `p`.`modifier_id`, `p`.`modifier_name`, `p`.`gmt_create`, `p`.`gmt_modified`, `os`.`id` FROM goods_product p LEFT JOIN goods_onsale os ON `p`.`id` = `os`.`id` WHERE `goods_id` = ?
+2024-10-29 08:55:15.956 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductJOINAll - ==> Parameters: 1550(Long)
+2024-10-29 08:55:16.013 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductJOINAll - <==      Total: 0
+2024-10-29 08:55:16.014 [main] INFO  cn.edu.xmu.javaee.core.aop.ControllerAspect - doAround: BusinessException， errno = RESOURCE_ID_NOTEXIST
+2024-10-29 08:55:16.173 [main] DEBUG c.e.x.j.p.controller.ProductController - getProductById: id = 1550122 
+2024-10-29 08:55:16.174 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductJOINAll - ==>  Preparing: SELECT `p`.`id`, `goods_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `p`.`creator_id`, `p`.`creator_name`, `p`.`modifier_id`, `p`.`modifier_name`, `p`.`gmt_create`, `p`.`gmt_modified`, `os`.`id` FROM goods_product p LEFT JOIN goods_onsale os ON `p`.`id` = `os`.`id` WHERE `goods_id` = ?
+2024-10-29 08:55:16.175 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductJOINAll - ==> Parameters: 1550122(Long)
+2024-10-29 08:55:16.232 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductJOINAll - <==      Total: 0
+2024-10-29 08:55:16.233 [main] INFO  cn.edu.xmu.javaee.core.aop.ControllerAspect - doAround: BusinessException， errno = RESOURCE_ID_NOTEXIST
+2024-10-29 08:55:16.394 [main] DEBUG c.e.x.j.p.controller.ProductController - getProductById: id = 1574 
+2024-10-29 08:55:16.395 [main] DEBUG c.e.x.javaee.productdemoaop.service.ProductService - findProductById_manual: id = 1574
+2024-10-29 08:55:16.395 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductWithAll - ==>  Preparing: SELECT `id`, `shop_id`, `goods_id`, `category_id`, `template_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `status`, `commission_ratio`, `shop_logistic_id`, `free_threshold` FROM goods_product WHERE ((`id` = ?))
+2024-10-29 08:55:16.396 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductWithAll - ==> Parameters: 1574(Long)
+2024-10-29 08:55:16.458 [main] DEBUG c.e.x.j.p.m.m.P.selectLastOnSaleByProductId - ====>  Preparing: select `id`, `product_id`, `price`, `begin_time`, `end_time`, `quantity`, `max_quantity`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified` from goods_onsale where `product_id` = ? and `begin_time` <= NOW() and `end_time` > NOW()
+2024-10-29 08:55:16.459 [main] DEBUG c.e.x.j.p.m.m.P.selectLastOnSaleByProductId - ====> Parameters: 1574(Long)
+2024-10-29 08:55:16.519 [main] DEBUG c.e.x.j.p.m.m.P.selectLastOnSaleByProductId - <====      Total: 1
+2024-10-29 08:55:16.519 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.selectOtherProduct - ====>  Preparing: select `id`, `goods_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified` from goods_product where `goods_id` = ?
+2024-10-29 08:55:16.520 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.selectOtherProduct - ====> Parameters: 393(Long)
+2024-10-29 08:55:16.578 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.selectOtherProduct - <====      Total: 7
+2024-10-29 08:55:16.579 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductWithAll - <==      Total: 1
+2024-10-29 08:55:16.742 [main] DEBUG c.e.x.j.p.controller.ProductController - getProductById: id = 1550122 
+2024-10-29 08:55:16.742 [main] DEBUG c.e.x.javaee.productdemoaop.service.ProductService - findProductById_manual: id = 1550122
+2024-10-29 08:55:16.743 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductWithAll - ==>  Preparing: SELECT `id`, `shop_id`, `goods_id`, `category_id`, `template_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `status`, `commission_ratio`, `shop_logistic_id`, `free_threshold` FROM goods_product WHERE ((`id` = ?))
+2024-10-29 08:55:16.744 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductWithAll - ==> Parameters: 1550122(Long)
+2024-10-29 08:55:16.795 [main] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductWithAll - <==      Total: 0
+2024-10-29 08:55:16.796 [main] INFO  cn.edu.xmu.javaee.core.aop.ControllerAspect - doAround: BusinessException， errno = RESOURCE_ID_NOTEXIST
+2024-10-29 08:55:16.919 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2024-10-29 08:55:16.922 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
