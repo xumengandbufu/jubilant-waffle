@@ -41,10 +41,12 @@ public class ProductController {
         logger.debug("getProductById: id = {} " ,id);
         ReturnObject retObj = null;
         Product product = null;
-        if (null != type && "manual" == type){
+        if (null != type && type.equals("manual")){
             product = productService.findProductById_manual(id);
-        } else {
+        } else if(null != type && type.equals("auto")){
             product = productService.retrieveProductByID(id, true);
+        }else{
+            product = productService.findProductByid_Join(id);
         }
         ProductDto productDto = CloneFactory.copy(new ProductDto(), product);
         retObj = new ReturnObject(productDto);
@@ -57,10 +59,12 @@ public class ProductController {
     public ReturnObject searchProductByName(@RequestParam String name, @RequestParam(required = false, defaultValue = "auto") String type) {
         ReturnObject retObj = null;
         List<Product> productList = null;
-        if (null != type && "manual" == type){
+        if (null != type && type.equals("manual")){
             productList = productService.findProductByName_manual(name);
-        } else {
+        }  else if(null != type && type.equals("auto")){
             productList = productService.retrieveProductByName(name, true);
+        }else{
+            productList = productService.findProductByName_Join(name);
         }
         List<ProductDto> data = productList.stream().map(o->CloneFactory.copy(new ProductDto(),o)).collect(Collectors.toList());
         retObj = new ReturnObject(data);

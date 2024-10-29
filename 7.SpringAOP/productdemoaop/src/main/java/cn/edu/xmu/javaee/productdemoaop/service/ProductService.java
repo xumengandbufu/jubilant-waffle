@@ -94,4 +94,14 @@ public class ProductService {
         return productDao.findProductByName_manual(name);
     }
 
+    @Transactional
+    public Product findProductByid_Join(Long id) throws BusinessException{
+        return productDao.findProductById_Join(id);
+    }
+
+    @Transactional
+    public List<Product> findProductByName_Join(String name) throws BusinessException{
+        return productDao.findProductByName_Join(name);
+    }
+
 }

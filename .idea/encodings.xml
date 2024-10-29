@@ -5,6 +5,8 @@
     <file url="file://$PROJECT_DIR$/11.RocketMQ/RocketMQReceiver/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/11.RocketMQ/RocketMQSender/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/11.RocketMQ/RocketMQSender/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/4.SpringMVC/RestFulDemo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/5.MyBatis/productdemo/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/7.SpringAOP/productdemoaop/src/main/java" charset="UTF-8" />
   </component>
 </project>

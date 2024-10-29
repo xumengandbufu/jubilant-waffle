@@ -41,6 +41,63 @@ public interface ProductAllMapper {
 
     @Select({
             "select",
+            "`p`.`id`, `goods_id`, `sku_sn`, `name`, `original_price`, `weight`, ",
+            "`barcode`, `unit`, `origin_place`,`p`.`creator_id`, `p`.`creator_name`, `p`.`modifier_id`, ",
+            "`p`.`modifier_name`, `p`.`gmt_create`, `p`.`gmt_modified`,",
+            "`os`.`id`", // 如果需要选择 goods_onsale 表的 id
+            "from goods_product p",
+            "LEFT JOIN goods_onsale os ON `p`.`id` = `os`.`id`",
+            "where `p`.`id` = #{productId,jdbcType=BIGINT}"
+    })
+    @Results({
+            @Result(column="id", property="id", jdbcType=JdbcType.BIGINT, id=true),
+            @Result(column="sku_sn", property="skuSn", jdbcType=JdbcType.VARCHAR),
+            @Result(column="name", property="name", jdbcType=JdbcType.VARCHAR),
+            @Result(column="original_price", property="originalPrice", jdbcType=JdbcType.BIGINT),
+            @Result(column="weight", property="weight", jdbcType=JdbcType.BIGINT),
+            @Result(column="barcode", property="barcode", jdbcType=JdbcType.VARCHAR),
+            @Result(column="unit", property="unit", jdbcType=JdbcType.VARCHAR),
+            @Result(column="origin_place", property="originPlace", jdbcType=JdbcType.VARCHAR),
+            @Result(column="commission_ratio", property="commissionRatio", jdbcType=JdbcType.INTEGER),
+            @Result(column="free_threshold", property="freeThreshold", jdbcType=JdbcType.BIGINT),
+            @Result(column="status", property="status", jdbcType=JdbcType.SMALLINT),
+            @Result(column="creator_id", property="creatorId", jdbcType=JdbcType.BIGINT),
+            @Result(column="creator_name", property="creatorName", jdbcType=JdbcType.VARCHAR),
+            @Result(column="modifier_id", property="modifierId", jdbcType=JdbcType.BIGINT),
+            @Result(column="modifier_name", property="modifierName", jdbcType=JdbcType.VARCHAR),
+            @Result(column="gmt_create", property="gmtCreate", jdbcType=JdbcType.TIMESTAMP),
+            @Result(column="gmt_modified", property="gmtModified", jdbcType=JdbcType.TIMESTAMP),
+            @Result(property =  "onSaleList", javaType = List.class, many =@Many(select="selectLastOnSaleByProductId"), column = "id"),
+            @Result(property =  "otherProduct", javaType = List.class, many =@Many(select="selectOtherProduct"), column = "goods_id")
+    })
+    ProductAllPo getProductJOINAll(Long productId);
+
+    @SelectProvider(type=ProductPoSqlProvider.class, method="selectByJoinExample")
+    @Results({
+            @Result(column="id", property="id", jdbcType=JdbcType.BIGINT, id=true),
+            @Result(column="sku_sn", property="skuSn", jdbcType=JdbcType.VARCHAR),
+            @Result(column="name", property="name", jdbcType=JdbcType.VARCHAR),
+            @Result(column="original_price", property="originalPrice", jdbcType=JdbcType.BIGINT),
+            @Result(column="weight", property="weight", jdbcType=JdbcType.BIGINT),
+            @Result(column="barcode", property="barcode", jdbcType=JdbcType.VARCHAR),
+            @Result(column="unit", property="unit", jdbcType=JdbcType.VARCHAR),
+            @Result(column="origin_place", property="originPlace", jdbcType=JdbcType.VARCHAR),
+            @Result(column="commission_ratio", property="commissionRatio", jdbcType=JdbcType.INTEGER),
+            @Result(column="free_threshold", property="freeThreshold", jdbcType=JdbcType.BIGINT),
+            @Result(column="status", property="status", jdbcType=JdbcType.SMALLINT),
+            @Result(column="creator_id", property="creatorId", jdbcType=JdbcType.BIGINT),
+            @Result(column="creator_name", property="creatorName", jdbcType=JdbcType.VARCHAR),
+            @Result(column="modifier_id", property="modifierId", jdbcType=JdbcType.BIGINT),
+            @Result(column="modifier_name", property="modifierName", jdbcType=JdbcType.VARCHAR),
+            @Result(column="gmt_create", property="gmtCreate", jdbcType=JdbcType.TIMESTAMP),
+            @Result(column="gmt_modified", property="gmtModified", jdbcType=JdbcType.TIMESTAMP),
+            @Result(property =  "onSaleList", javaType = List.class, many =@Many(select="selectLastOnSaleByProductId"), column = "id"),
+            @Result(property =  "otherProduct", javaType = List.class, many =@Many(select="selectOtherProduct"), column = "goods_id")
+    })
+    List<ProductAllPo> selectByJoinExample(ProductPoExample example);
+
+    @Select({
+            "select",
             "`id`, `product_id`, `price`, `begin_time`, `end_time`, `quantity`, `max_quantity`, `creator_id`, ",
             "`creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`",
             "from goods_onsale",
