@@ -2,6 +2,8 @@
 
 package cn.edu.xmu.javaee.productdemoaop.mapper.manual;
 
+import cn.edu.xmu.javaee.productdemoaop.dao.bo.Product;
+import cn.edu.xmu.javaee.productdemoaop.dao.bo.User;
 import cn.edu.xmu.javaee.productdemoaop.mapper.generator.ProductPoSqlProvider;
 import cn.edu.xmu.javaee.productdemoaop.mapper.generator.po.OnSalePo;
 import cn.edu.xmu.javaee.productdemoaop.mapper.generator.po.ProductPo;
@@ -9,6 +11,7 @@ import cn.edu.xmu.javaee.productdemoaop.mapper.generator.po.ProductPoExample;
 import cn.edu.xmu.javaee.productdemoaop.mapper.manual.po.ProductAllPo;
 import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.type.JdbcType;
+import org.springframework.boot.autoconfigure.security.SecurityProperties;
 
 import java.util.List;
 
@@ -40,14 +43,15 @@ public interface ProductAllMapper {
     List<ProductAllPo> getProductWithAll(ProductPoExample example);
 
     @Select({
-            "select",
-            "`p`.`id`, `goods_id`, `sku_sn`, `name`, `original_price`, `weight`, ",
-            "`barcode`, `unit`, `origin_place`,`p`.`creator_id`, `p`.`creator_name`, `p`.`modifier_id`, ",
-            "`p`.`modifier_name`, `p`.`gmt_create`, `p`.`gmt_modified`,",
-            "`os`.`id`", // 如果需要选择 goods_onsale 表的 id
+            "select p.`id`, p.`goods_id`, p.`sku_sn`, p.`name`, p.`original_price`, p.`weight`, " +
+            "p.`barcode`, p.`unit`, p.`origin_place`,p.`creator_id`, p.`creator_name`, p.`modifier_id`, " +
+            "p.`modifier_name`, p.`gmt_create`, p.`gmt_modified`," +
+            "os.`id`,os.`shop_id`, os.`product_id`, os.`price`, os.`begin_time`, os.`end_time`, os.`quantity`, " +
+            "os.`type`, os.`max_quantity`, os.`invalid`" +
             "from goods_product p",
-            "LEFT JOIN goods_onsale os ON `p`.`id` = `os`.`id`",
-            "where `p`.`id` = #{productId,jdbcType=BIGINT}"
+            "LEFT JOIN goods_onsale os ON p.`id` = os.`id`" +
+            "LEFT JOIN goods_product ps ON ps.`goods_id` = p.`goods_id` AND ps.`id` <> p.`id`" +
+            "where p.`id` = #{productId,jdbcType=BIGINT} and `begin_time` <= NOW() and `end_time` > NOW()"
     })
     @Results({
             @Result(column="id", property="id", jdbcType=JdbcType.BIGINT, id=true),
@@ -62,7 +66,7 @@ public interface ProductAllMapper {
             @Result(column="free_threshold", property="freeThreshold", jdbcType=JdbcType.BIGINT),
             @Result(column="status", property="status", jdbcType=JdbcType.SMALLINT),
             @Result(column="creator_id", property="creatorId", jdbcType=JdbcType.BIGINT),
-            @Result(column="creator_name", property="creatorName", jdbcType=JdbcType.VARCHAR),
+            @Result(column="creatorName", property="creatorName", jdbcType=JdbcType.VARCHAR),
             @Result(column="modifier_id", property="modifierId", jdbcType=JdbcType.BIGINT),
             @Result(column="modifier_name", property="modifierName", jdbcType=JdbcType.VARCHAR),
             @Result(column="gmt_create", property="gmtCreate", jdbcType=JdbcType.TIMESTAMP),
@@ -70,9 +74,15 @@ public interface ProductAllMapper {
             @Result(property =  "onSaleList", javaType = List.class, many =@Many(select="selectLastOnSaleByProductId"), column = "id"),
             @Result(property =  "otherProduct", javaType = List.class, many =@Many(select="selectOtherProduct"), column = "goods_id")
     })
-    ProductAllPo getProductJOINAll(Long productId);
+    List<ProductAllPo> getProductJOINAll(Long productId);
 
-    @SelectProvider(type=ProductPoSqlProvider.class, method="selectByJoinExample")
+    @Select({
+            "select  p.`id`, p.`goods_id`, p.`sku_sn`, p.`name`, p.`original_price`, p.`weight`, " +
+                    "p.`barcode`, p.`unit`, p.`origin_place`,p.`creator_id`, p.`creator_name`, p.`modifier_id`, " +
+                    "p.`modifier_name`, p.`gmt_create`, p.`gmt_modified`" +
+                    "from goods_product p " +
+                    "where p.`name` = #{name}"
+    })
     @Results({
             @Result(column="id", property="id", jdbcType=JdbcType.BIGINT, id=true),
             @Result(column="sku_sn", property="skuSn", jdbcType=JdbcType.VARCHAR),
@@ -94,7 +104,29 @@ public interface ProductAllMapper {
             @Result(property =  "onSaleList", javaType = List.class, many =@Many(select="selectLastOnSaleByProductId"), column = "id"),
             @Result(property =  "otherProduct", javaType = List.class, many =@Many(select="selectOtherProduct"), column = "goods_id")
     })
-    List<ProductAllPo> selectByJoinExample(ProductPoExample example);
+    List<ProductAllPo> selectByJoinExample(String name);
+
+    @Select({
+            "select `creator_name`, `creator_id`, `id`",
+            "from goods_product",
+            "where `id` = #{productId,jdbcType=BIGINT}"
+    })
+    @Results({
+            @Result(column="creator_id", property="id", jdbcType=JdbcType.BIGINT),
+            @Result(column="creator_name", property="name", jdbcType=JdbcType.VARCHAR),
+    })
+    User selectCreator(Long productId);
+
+    @Select({
+            "select `modifier_id`, `modifier_name`, `id` ",
+            "from goods_product",
+            "where `id` = #{productId,jdbcType=BIGINT}"
+    })
+    @Results({
+            @Result(column="modifier_id", property="id", jdbcType=JdbcType.BIGINT),
+            @Result(column="modifier_name", property="name", jdbcType=JdbcType.VARCHAR),
+    })
+    User selectModifier(Long productId);
 
     @Select({
             "select",

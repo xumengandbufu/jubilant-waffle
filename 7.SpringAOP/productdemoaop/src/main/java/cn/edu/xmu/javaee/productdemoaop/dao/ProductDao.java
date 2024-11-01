@@ -191,22 +191,18 @@ public class ProductDao {
 
     public Product findProductById_Join(Long id) throws BusinessException {
         Product product = null;
-        ProductAllPo productPoList = productAllMapper.getProductJOINAll(id);
-
-        if (productPoList.getId().describeConstable().isEmpty()){
+        List<ProductAllPo> pap = productAllMapper.getProductJOINAll(id);
+        if (pap.size() == 0){
             throw new BusinessException(ReturnNo.RESOURCE_ID_NOTEXIST, "产品id不存在");
         }
-        product = CloneFactory.copy(new Product(), productPoList);
+        product = CloneFactory.copy(new Product(), pap.get(0));
         logger.debug("findProductByID_manual: product = {}", product);
         return product;
     }
 
     public List<Product> findProductByName_Join(String name) throws BusinessException{
         List<Product> productList;
-        ProductPoExample example = new ProductPoExample();
-        ProductPoExample.Criteria criteria = example.createCriteria();
-        criteria.andNameEqualTo(name);
-        List<ProductAllPo> productPoList = productAllMapper.selectByJoinExample(example);
+        List<ProductAllPo> productPoList = productAllMapper.selectByJoinExample(name);
         productList =  productPoList.stream().map(o->CloneFactory.copy(new Product(), o)).collect(Collectors.toList());
         logger.debug("findProductByName_join: productList = {}", productList);
         return productList;

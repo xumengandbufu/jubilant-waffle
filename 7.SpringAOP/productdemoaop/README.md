@@ -108,7 +108,12 @@
 修改jmx文件中的hostname，改为swarm集群的内部ip，运行
 <br>`jmeter -n -t ReadProduct.jmx -l Read100-20.jtl -e -o Read/100-20`对productdemoaop进行测试
 
-
+### 或者打开D:\apache-jmeter-5.6.3\bin\jmeter（windows批处理程序），
+### test plan -> add -> thread（设置参数）
+### thread -> add -> sampler -> http request（设置http参数）
+### http request -> add -> listener -> view
+### 控制台打开到bin，jmeter -n -t ReadProduct.jmx -l Read100-20.jtl -e -o Read/100-20
+### 上面的ReadProduct.jmx不要全信，如果要访问指定url，记得把他改成UI界面里产生的jmx文件，可能在D:\apache-jmeter-5.6.3\bin\read\readJoin里面
 
 "# jubilant-waffle" 
 "#product1"  
