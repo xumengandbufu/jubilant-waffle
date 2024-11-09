@@ -1,64 +1,41 @@
-package cn.edu.xmu.javaee.productdemoaop.mapper.manual.po;
+package cn.edu.xmu.javaee.productdemoaop.mapperjpa.po;
 
-import cn.edu.xmu.javaee.productdemoaop.mapper.generator.po.OnSalePo;
-import cn.edu.xmu.javaee.productdemoaop.mapper.generator.po.ProductPo;
-import jakarta.persistence.*;
-import lombok.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 
-/**
- * 商品规格
- * @author Ming Qiu
- **/
+@Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class ProductAllPo {
-
-    /**
-     * 代理对象
-     */
-
+public class ProductJPAPo {
+    @Id
     private Long id;
-
-    private List<ProductPo> otherProduct;
-
-    private List<OnSalePo> onSaleList;
-
+    private Long shopId;
+    private Long goodsId;
+    private Long categoryId;
+    private Long templateId;
     private String skuSn;
-
     private String name;
-
     private Long originalPrice;
-
     private Long weight;
-
     private String barcode;
-
     private String unit;
-
     private String originPlace;
-
     private Long creatorId;
-
     private String creatorName;
-
     private Long modifierId;
-
     private String modifierName;
-
     private LocalDateTime gmtCreate;
-
     private LocalDateTime gmtModified;
-
-    private Integer commissionRatio;
-
-    private Long freeThreshold;
-
     private Byte status;
-
+    private Integer commissionRatio;
+    private Long shopLogisticId;
+    private Long freeThreshold;
 }

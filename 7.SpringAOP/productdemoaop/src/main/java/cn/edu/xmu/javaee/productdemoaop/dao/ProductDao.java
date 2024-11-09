@@ -3,16 +3,18 @@ package cn.edu.xmu.javaee.productdemoaop.dao;
 
 import cn.edu.xmu.javaee.core.exception.BusinessException;
 import cn.edu.xmu.javaee.core.model.ReturnNo;
-import cn.edu.xmu.javaee.productdemoaop.dao.OnSaleDao;
 import cn.edu.xmu.javaee.productdemoaop.dao.bo.OnSale;
 import cn.edu.xmu.javaee.productdemoaop.dao.bo.Product;
 import cn.edu.xmu.javaee.productdemoaop.dao.bo.User;
-import cn.edu.xmu.javaee.productdemoaop.mapper.generator.ProductPoMapper;
 import cn.edu.xmu.javaee.productdemoaop.mapper.generator.po.OnSalePo;
+import cn.edu.xmu.javaee.productdemoaop.mapperjpa.OnSaleMapper_jpa;
+import cn.edu.xmu.javaee.productdemoaop.mapperjpa.ProductByNameMapper_jpa;
+import cn.edu.xmu.javaee.productdemoaop.mapper.generator.ProductPoMapper;
 import cn.edu.xmu.javaee.productdemoaop.mapper.generator.po.ProductPo;
 import cn.edu.xmu.javaee.productdemoaop.mapper.generator.po.ProductPoExample;
 import cn.edu.xmu.javaee.productdemoaop.mapper.manual.ProductAllMapper;
 import cn.edu.xmu.javaee.productdemoaop.mapper.manual.po.ProductAllPo;
+import cn.edu.xmu.javaee.productdemoaop.mapperjpa.po.ProductJPAPo;
 import cn.edu.xmu.javaee.productdemoaop.util.CloneFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -39,11 +41,16 @@ public class ProductDao {
 
     private ProductAllMapper productAllMapper;
 
+    ProductByNameMapper_jpa productByNameMapper;
+    OnSaleMapper_jpa onSaleMapper;
+
     @Autowired
-    public ProductDao(ProductPoMapper productPoMapper, OnSaleDao onSaleDao, ProductAllMapper productAllMapper) {
+    public ProductDao(OnSaleMapper_jpa onSaleMapper,ProductByNameMapper_jpa productByNameMapper, ProductPoMapper productPoMapper, OnSaleDao onSaleDao, ProductAllMapper productAllMapper) {
         this.productPoMapper = productPoMapper;
         this.onSaleDao = onSaleDao;
         this.productAllMapper = productAllMapper;
+        this.productByNameMapper = productByNameMapper;
+        this.onSaleMapper = onSaleMapper;
     }
 
     /**
@@ -204,6 +211,23 @@ public class ProductDao {
         List<Product> productList;
         List<ProductAllPo> productPoList = productAllMapper.selectByJoinExample(name);
         productList =  productPoList.stream().map(o->CloneFactory.copy(new Product(), o)).collect(Collectors.toList());
+        logger.debug("findProductByName_join: productList = {}", productList);
+        return productList;
+    }
+
+    public List<Product> findProductByName_JPA(String name) throws BusinessException{
+        List<Product> productList = new ArrayList<>();
+        List<ProductPo> productAllList = productByNameMapper.findByName(name);
+        for(ProductPo productPo : productAllList){
+            List<ProductPo> otherproducts = productByNameMapper.findByGoodsId(productPo.getGoodsId());
+            List<Product> otherproductList = otherproducts.stream().map(o->CloneFactory.copy(new Product(), o)).collect(Collectors.toList());
+            Product product =  CloneFactory.copy(new Product(), productPo);
+            List<OnSalePo> onSalePos = onSaleMapper.findByproductId(product.getId());
+            List<OnSale> onSaleList = onSalePos.stream().map(po-> CloneFactory.copy(new OnSale(), po)).collect(Collectors.toList());
+            product.setOtherProduct(otherproductList);
+            product.setOnSaleList(onSaleList);
+            productList.add(product);
+        }
         logger.debug("findProductByName_join: productList = {}", productList);
         return productList;
     }

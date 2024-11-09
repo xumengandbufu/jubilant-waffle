@@ -10,6 +10,7 @@ import cn.edu.xmu.javaee.productdemoaop.dao.bo.User;
 import cn.edu.xmu.javaee.productdemoaop.mapper.generator.po.OnSalePo;
 import cn.edu.xmu.javaee.productdemoaop.mapper.generator.po.ProductPo;
 import cn.edu.xmu.javaee.productdemoaop.mapper.manual.po.ProductAllPo;
+import cn.edu.xmu.javaee.productdemoaop.mapperjpa.po.ProductJPAPo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -101,4 +102,5 @@ public class CloneFactory {
         target=Product.builder().name(source.getName()).barcode(source.getBarcode()).unit(source.getUnit()).originalPrice(source.getOriginalPrice()).originPlace(source.getOriginPlace()).weight(source.getWeight()).build();
         return target;
     }
+
 }

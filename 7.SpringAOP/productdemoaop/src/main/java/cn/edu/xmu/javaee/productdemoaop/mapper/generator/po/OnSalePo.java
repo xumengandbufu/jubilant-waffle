@@ -1,7 +1,12 @@
 package cn.edu.xmu.javaee.productdemoaop.mapper.generator.po;
 
-import java.time.LocalDateTime;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
+import java.time.LocalDateTime;
+@Entity
+@Table(name = "goods_onsale")
 public class OnSalePo {
     /**
      *
@@ -10,6 +15,7 @@ public class OnSalePo {
      *
      * @mbg.generated
      */
+    @Id
     private Long id;
 
     /**

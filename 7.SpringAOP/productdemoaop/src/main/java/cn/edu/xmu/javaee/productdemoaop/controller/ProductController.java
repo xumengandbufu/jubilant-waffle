@@ -63,8 +63,10 @@ public class ProductController {
             productList = productService.findProductByName_manual(name);
         }  else if(null != type && type.equals("auto")){
             productList = productService.retrieveProductByName(name, true);
-        }else{
+        }else if(null != type && type.equals("Join")){
             productList = productService.findProductByName_Join(name);
+        }else{
+            productList = productService.findProductByName_JPA(name);
         }
         List<ProductDto> data = productList.stream().map(o->CloneFactory.copy(new ProductDto(),o)).collect(Collectors.toList());
         retObj = new ReturnObject(data);
