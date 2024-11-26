@@ -41,12 +41,13 @@ public class ProductController {
         logger.debug("getProductById: id = {} " ,id);
         ReturnObject retObj = null;
         Product product = null;
+
         if (null != type && type.equals("manual")){
             product = productService.findProductById_manual(id);
         } else if(null != type && type.equals("auto")){
             product = productService.retrieveProductByID(id, true);
         }else{
-            product = productService.findProductByid_Join(id);
+            product = productService.findProductByid_redis(id);
         }
         ProductDto productDto = CloneFactory.copy(new ProductDto(), product);
         retObj = new ReturnObject(productDto);

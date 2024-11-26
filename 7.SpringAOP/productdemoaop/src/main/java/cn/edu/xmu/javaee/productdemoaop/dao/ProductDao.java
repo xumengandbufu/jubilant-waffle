@@ -16,26 +16,38 @@ import cn.edu.xmu.javaee.productdemoaop.mapper.manual.ProductAllMapper;
 import cn.edu.xmu.javaee.productdemoaop.mapper.manual.po.ProductAllPo;
 import cn.edu.xmu.javaee.productdemoaop.mapperjpa.po.ProductJPAPo;
 import cn.edu.xmu.javaee.productdemoaop.util.CloneFactory;
+import cn.edu.xmu.javaee.productdemoaop.util.RedisUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
  * @author Ming Qiu
  **/
+
+@Service
 @Repository
 public class ProductDao {
+    private final static String KEY = "P%d";
+    private final static String OTHER_KEY = "PO%d";
+
+    private int timeout;
+    private final ProductPoMapper productPoMapper;
+    private RedisUtil redisUtil;
 
     private final static Logger logger = LoggerFactory.getLogger(ProductDao.class);
-
-    private ProductPoMapper productPoMapper;
 
     private OnSaleDao onSaleDao;
 
@@ -45,8 +57,9 @@ public class ProductDao {
     OnSaleMapper_jpa onSaleMapper;
 
     @Autowired
-    public ProductDao(OnSaleMapper_jpa onSaleMapper,ProductByNameMapper_jpa productByNameMapper, ProductPoMapper productPoMapper, OnSaleDao onSaleDao, ProductAllMapper productAllMapper) {
+    public ProductDao(OnSaleMapper_jpa onSaleMapper, ProductByNameMapper_jpa productByNameMapper, ProductPoMapper productPoMapper, RedisUtil redisUtil, OnSaleDao onSaleDao, ProductAllMapper productAllMapper) {
         this.productPoMapper = productPoMapper;
+        this.redisUtil = redisUtil;
         this.onSaleDao = onSaleDao;
         this.productAllMapper = productAllMapper;
         this.productByNameMapper = productByNameMapper;
@@ -230,5 +243,33 @@ public class ProductDao {
         }
         logger.debug("findProductByName_join: productList = {}", productList);
         return productList;
+    }
+
+    @Cacheable(value = "users", key = "#id")
+
+    public Product findProductById_redis(Long id) throws RuntimeException {
+        logger.debug("findValidById: id = {}", id);
+        String key = String.format(KEY, id);
+        Product bo;
+        if (this.redisUtil.hasKey(key)) {
+            bo = (Product) this.redisUtil.get(key);
+
+        }else {
+            Optional<String> redisKey=Optional.of(key);
+            bo = this.findBo(id);
+            redisKey.ifPresent(key1 -> redisUtil.set(key1, (Serializable) bo, timeout));
+        }
+        return bo;
+    }
+    private Product findBo(Long productId) {
+        Optional<ProductPo> ret = this.productByNameMapper.findById(productId);
+        if (ret.isPresent()) {
+            ProductPo po = ret.get();
+            String key = String.format(KEY, productId);
+            Product bo = CloneFactory.copy(new Product(), po);
+            return bo;
+        } else {
+            throw new BusinessException(ReturnNo.RESOURCE_ID_NOTEXIST, String.format(ReturnNo.RESOURCE_ID_NOTEXIST.getMessage(), "产品", productId));
+        }
     }
 }

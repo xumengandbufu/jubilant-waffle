@@ -6,16 +6,11 @@
       <list>
         <option value="$PROJECT_DIR$/7.SpringAOP/productdemoaop/pom.xml" />
         <option value="$PROJECT_DIR$/10. SpringData_Mongo/order/pom.xml" />
-        <option value="$PROJECT_DIR$/10.SpringData_Mongo/order/pom.xml" />
         <option value="$PROJECT_DIR$/11.RocketMQ/RocketMQDemo/pom.xml" />
-        <option value="$PROJECT_DIR$/11.RocketMQ/RocketMQReceiver/pom.xml" />
-        <option value="$PROJECT_DIR$/11.RocketMQ/RocketMQSender/pom.xml" />
-        <option value="$PROJECT_DIR$/4.SpringMVC/RestFulDemo/pom.xml" />
-        <option value="$PROJECT_DIR$/5.MyBatis/productdemo/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" default="true" project-jdk-name="19" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="19" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

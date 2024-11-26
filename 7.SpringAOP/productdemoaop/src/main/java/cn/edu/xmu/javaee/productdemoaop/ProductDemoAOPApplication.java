@@ -15,6 +15,7 @@ import cn.edu.xmu.javaee.core.jpa.SelectiveUpdateJpaRepositoryImpl;
 
 public class ProductDemoAOPApplication {
 
+
 	public static void main(String[] args) {
 		SpringApplication.run(ProductDemoAOPApplication.class, args);
 	}

@@ -7,13 +7,15 @@ import cn.edu.xmu.javaee.productdemoaop.dao.bo.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-
+@Repository
 @Service
 public class ProductService {
+
 
     private Logger logger = LoggerFactory.getLogger(ProductService.class);
 
@@ -107,6 +109,12 @@ public class ProductService {
     @Transactional
     public List<Product> findProductByName_JPA(String name) throws BusinessException{
         return productDao.findProductByName_JPA(name);
+    }
+
+
+    @Transactional
+    public Product findProductByid_redis(Long id) throws BusinessException{
+        return productDao.findProductById_redis(id);
     }
 
 }
