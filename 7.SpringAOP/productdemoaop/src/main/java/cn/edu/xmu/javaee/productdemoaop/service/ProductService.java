@@ -4,6 +4,8 @@ import cn.edu.xmu.javaee.core.exception.BusinessException;
 import cn.edu.xmu.javaee.productdemoaop.dao.ProductDao;
 import cn.edu.xmu.javaee.productdemoaop.dao.bo.Product;
 import cn.edu.xmu.javaee.productdemoaop.dao.bo.User;
+import cn.edu.xmu.javaee.productdemoaop.mapper.generator.po.ProductPo;
+import cn.edu.xmu.javaee.productdemoaop.util.CloneFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -114,7 +116,13 @@ public class ProductService {
 
     @Transactional
     public Product findProductByid_redis(Long id) throws BusinessException{
-        return productDao.findProductById_redis(id);
+        boolean into = false;
+        if(id == 2630)into = true;
+        ProductPo productpo = this.productDao.findProductById_redis(id, into);
+        Product product = CloneFactory.copy(new Product(), productpo);
+        product.setOnSaleList(this.productDao.findOnsaleById_redis(id, into));
+        product.setOtherProduct(this.productDao.findProductsById_redis(productpo.getGoodsId(), into));
+        return product;
     }
 
 }

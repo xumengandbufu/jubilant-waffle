@@ -40,8 +40,8 @@ import java.util.stream.Collectors;
 @Service
 @Repository
 public class ProductDao {
-    private final static String KEY = "P%d";
-    private final static String OTHER_KEY = "PO%d";
+    private final static String KEY_Product = "product%d";
+    private final static String KEY_Onsale = "onsale%d";
 
     private int timeout;
     private final ProductPoMapper productPoMapper;
@@ -247,29 +247,62 @@ public class ProductDao {
 
     @Cacheable(value = "users", key = "#id")
 
-    public Product findProductById_redis(Long id) throws RuntimeException {
+    public ProductPo findProductById_redis(Long id, boolean into) throws RuntimeException {
         logger.debug("findValidById: id = {}", id);
-        String key = String.format(KEY, id);
-        Product bo;
-        if (this.redisUtil.hasKey(key)) {
-            bo = (Product) this.redisUtil.get(key);
-
+        String key_product = String.format(KEY_Product, id);
+        ProductPo bo;
+        if (this.redisUtil.hasKey(key_product)) {
+            logger.info("Cache hit product");
+            bo = (ProductPo) this.redisUtil.get(key_product);
         }else {
-            Optional<String> redisKey=Optional.of(key);
-            bo = this.findBo(id);
-            redisKey.ifPresent(key1 -> redisUtil.set(key1, (Serializable) bo, timeout));
+            Optional<ProductPo> po = this.productByNameMapper.findById(id);
+            bo = po.get();
+            if(into)
+            {
+                Optional<String> redisKey=Optional.of(key_product);
+                redisKey.ifPresent(key1 -> redisUtil.set(key1, (Serializable) bo, timeout));
+            }
         }
         return bo;
     }
-    private Product findBo(Long productId) {
-        Optional<ProductPo> ret = this.productByNameMapper.findById(productId);
-        if (ret.isPresent()) {
-            ProductPo po = ret.get();
-            String key = String.format(KEY, productId);
-            Product bo = CloneFactory.copy(new Product(), po);
-            return bo;
-        } else {
-            throw new BusinessException(ReturnNo.RESOURCE_ID_NOTEXIST, String.format(ReturnNo.RESOURCE_ID_NOTEXIST.getMessage(), "产品", productId));
+    @Cacheable(value = "users", key = "#id")
+    public List<OnSale> findOnsaleById_redis(Long id, boolean into) throws RuntimeException {
+        logger.debug("findValidById: id = {}", id);
+        String key_onsale = String.format(KEY_Onsale, id);
+        List<OnSale> onSaleList;
+        if (this.redisUtil.hasKey(key_onsale)) {
+            logger.info("Cache hit onsale");
+            onSaleList = (List<OnSale>) redisUtil.get(key_onsale);
+        }else{
+            List<OnSalePo> onSales = this.onSaleMapper.findByproductId(id);
+            onSaleList = onSales.stream().map(o -> CloneFactory.copy(new OnSale(), o)).collect(Collectors.toList());
+            if(into)
+            {
+                Optional<String> redisKey = Optional.of(KEY_Onsale);
+                redisKey.ifPresent(Key1 -> redisUtil.set(Key1, (Serializable) onSaleList, timeout));
+            }
         }
+        return onSaleList;
     }
+    @Cacheable(value = "users", key = "#id")
+    public List<Product> findProductsById_redis(Long id, boolean into) throws RuntimeException {
+        logger.debug("findValidById: id = {}", id);
+        String key_products = String.format(KEY_Product, id);
+        List<Product> productList;
+        if(this.redisUtil.hasKey(key_products))
+        {
+            logger.info("Cache hit otherproduct");
+            productList = (List<Product>) redisUtil.get(key_products);
+        }else{
+            List<ProductPo> productPoList = this.productByNameMapper.findByGoodsId(id);
+            productList = productPoList.stream().map(o -> CloneFactory.copy(new Product(), o)).collect(Collectors.toList());
+            if(into)
+            {
+                Optional<String> redisKey = Optional.of(key_products);
+                redisKey.ifPresent(Key1 -> redisUtil.set(Key1, (Serializable) productList, timeout));
+            }
+        }
+        return productList;
+    }
+
 }
