@@ -251,8 +251,9 @@ public class ProductDao {
         logger.debug("findValidById: id = {}", id);
         String key_product = String.format(KEY_Product, id);
         ProductPo bo;
+        logger.info("findValidById: key_product = {}", key_product);
         if (this.redisUtil.hasKey(key_product)) {
-            logger.info("Cache hit product");
+            logger.info("Cache hit product id = {}", key_product);
             bo = (ProductPo) this.redisUtil.get(key_product);
         }else {
             Optional<ProductPo> po = this.productByNameMapper.findById(id);
@@ -265,20 +266,20 @@ public class ProductDao {
         }
         return bo;
     }
-    @Cacheable(value = "users", key = "#id")
+    //@Cacheable(value = "users", key = "#id")
     public List<OnSale> findOnsaleById_redis(Long id, boolean into) throws RuntimeException {
         logger.debug("findValidById: id = {}", id);
         String key_onsale = String.format(KEY_Onsale, id);
         List<OnSale> onSaleList;
         if (this.redisUtil.hasKey(key_onsale)) {
-            logger.info("Cache hit onsale");
+            logger.info("Cache hit onsale id = {}", key_onsale);
             onSaleList = (List<OnSale>) redisUtil.get(key_onsale);
         }else{
             List<OnSalePo> onSales = this.onSaleMapper.findByproductId(id);
             onSaleList = onSales.stream().map(o -> CloneFactory.copy(new OnSale(), o)).collect(Collectors.toList());
             if(into)
             {
-                Optional<String> redisKey = Optional.of(KEY_Onsale);
+                Optional<String> redisKey = Optional.of(key_onsale);
                 redisKey.ifPresent(Key1 -> redisUtil.set(Key1, (Serializable) onSaleList, timeout));
             }
         }
@@ -291,7 +292,7 @@ public class ProductDao {
         List<Product> productList;
         if(this.redisUtil.hasKey(key_products))
         {
-            logger.info("Cache hit otherproduct");
+            logger.info("Cache hit otherproduct id = {}", key_products);
             productList = (List<Product>) redisUtil.get(key_products);
         }else{
             List<ProductPo> productPoList = this.productByNameMapper.findByGoodsId(id);
