@@ -9,12 +9,8 @@ server:
   port: 8080
 
 spring:
-  data:
-    #MongoDB configuration
-    mongodb:
-      host: mongo
-      port: 27017
-      database: oomall_demo
+  profiles:
+    active: dev
   jackson:
     #JSON的时间数据的时区
     time-zone: GMT+8

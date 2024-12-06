@@ -7,10 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="productdemoaop" />
+        <module name="order" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="order" target="17" />
       <module name="productdemo" target="17" />
       <module name="restfuldemo" target="17" />
       <module name="rocketmqreceiver" target="17" />
